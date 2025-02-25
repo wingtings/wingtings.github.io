@@ -12,7 +12,7 @@
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_bq08450reo';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};</script>
   
   <title>
-    3rd.「纯蓝」 |
+    pvz-ustc开发日志 |
     
     wingtings
   </title>
@@ -27,20 +27,18 @@
 
   
   
-    <meta name="description" content="写稿日期：2024 12 1 发布日期：2024 12 14 3rd.「纯蓝」P主：COPY 投稿日期：2021 7 12 B站原视频链接指路 网易云链接 Recommended by @轼然sota（迭羽P） 迭羽老师今年发布的翻调&amp;原创手书PV 洛天依十周年演唱会版   “三行印刷体便概括的诞生　和普通人也没有什么差别">
+    <meta name="description" content="pvz-ustc改版制作开发日志起因寒假闲的无聊，偶然习得pvz改版开发的一些有趣的技能，正巧本人的科学社会研讨课题正是游戏开发相关，本来正愁着没有合适的选题，这下是踏破铁鞋无觅处——得来全不费功夫！ 2025.2.25开始写一些文案、策划之类的，准备一下要实现的功能、特性、素材等，属于是收集灵感阶段。现在的初步设想是，在不惊动官方的情况下，将ustc的一些特色融入其中，而且不会非常露骨、刺眼。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3rd.「纯蓝」">
-<meta property="og:url" content="http://localhost:4000/2024/12/01/3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D/index.html">
+<meta property="og:title" content="pvz-ustc开发日志">
+<meta property="og:url" content="http://localhost:4000/2025/02/25/pvz-ustc%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/index.html">
 <meta property="og:site_name" content="wingtings">
-<meta property="og:description" content="写稿日期：2024 12 1 发布日期：2024 12 14 3rd.「纯蓝」P主：COPY 投稿日期：2021 7 12 B站原视频链接指路 网易云链接 Recommended by @轼然sota（迭羽P） 迭羽老师今年发布的翻调&amp;原创手书PV 洛天依十周年演唱会版   “三行印刷体便概括的诞生　和普通人也没有什么差别">
+<meta property="og:description" content="pvz-ustc改版制作开发日志起因寒假闲的无聊，偶然习得pvz改版开发的一些有趣的技能，正巧本人的科学社会研讨课题正是游戏开发相关，本来正愁着没有合适的选题，这下是踏破铁鞋无觅处——得来全不费功夫！ 2025.2.25开始写一些文案、策划之类的，准备一下要实现的功能、特性、素材等，属于是收集灵感阶段。现在的初步设想是，在不惊动官方的情况下，将ustc的一些特色融入其中，而且不会非常露骨、刺眼。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://localhost:4000/images/3-1.jpg">
-<meta property="article:published_time" content="2024-12-01T13:22:47.000Z">
-<meta property="article:modified_time" content="2025-02-14T13:41:44.014Z">
+<meta property="article:published_time" content="2025-02-25T15:13:42.000Z">
+<meta property="article:modified_time" content="2025-02-25T15:31:55.183Z">
 <meta property="article:author" content="wingtings">
-<meta property="article:tag" content="中文vocaloid">
+<meta property="article:tag" content="开发">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://localhost:4000/images/3-1.jpg">
   
   
     <link rel="alternate" href="/atom.xml" title="wingtings" type="application/atom+xml">
@@ -167,7 +165,7 @@
       
     </picture>
     
-      <img fetchpriority="high" src="/images/banner.webp" alt="3rd.「纯蓝」">
+      <img fetchpriority="high" src="/images/banner.webp" alt="pvz-ustc开发日志">
     
   
   <div id="header-outer">
@@ -176,7 +174,7 @@
         
         
           <a href="/" id="logo">
-            <h1 data-aos="slide-up">3rd.「纯蓝」</h1>
+            <h1 data-aos="slide-up">pvz-ustc开发日志</h1>
           </a>
         
       
@@ -201,7 +199,7 @@
   <h3 class="toc-title">Contents</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D"><span class="toc-number">1.</span> <span class="toc-text">3rd.「纯蓝」</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pvz-ustc%E6%94%B9%E7%89%88%E5%88%B6%E4%BD%9C%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97"><span class="toc-number">1.</span> <span class="toc-text">pvz-ustc改版制作开发日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-number">1.1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2025-2-25"><span class="toc-number">1.2.</span> <span class="toc-text">2025.2.25</span></a></li></ol></li></ol>
       
   </div>
 </div>
@@ -281,13 +279,13 @@
   </div>
 </aside>
 
-          <section id="main"><article id="post-3rd-「纯蓝」" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="post-pvz-ustc开发日志" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
-  <a href="/2024/12/01/3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D/" class="article-date-link" data-aos="zoom-in">
-    <time datetime="2024-12-01T13:22:47.000Z" itemprop="datePublished">2024-12-01</time>
-    <time style="display: none;" id="post-update-time">2025-02-14</time>
+  <a href="/2025/02/25/pvz-ustc%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2025-02-25T15:13:42.000Z" itemprop="datePublished">2025-02-25</time>
+    <time style="display: none;" id="post-update-time">2025-02-25</time>
   </a>
 </div>
 
@@ -300,57 +298,20 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <p><strong>写稿日期：2024 12 1</strong></p>
-<p><strong>发布日期：2024 12 14</strong></p>
-<h1 id="3rd-「纯蓝」"><a href="#3rd-「纯蓝」" class="headerlink" title="3rd.「纯蓝」"></a>3rd.「纯蓝」</h1><p><strong>P主：COPY</strong></p>
-<p><strong>投稿日期：2021 7 12</strong></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1z64y1b7H4/?spm_id_from=333.337.search-card.all.click">B站原视频链接指路</a></p>
-<p><a target="_blank" rel="noopener" href="https://music.163.com/#/song/1864974747/">网易云链接</a></p>
-<p><strong>Recommended by @轼然sota（迭羽P）</strong></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV181421k71Z/?spm_id_from=333.1387.0.0&vd_source=664bee53c86bfd3e072a77c585e3b350">迭羽老师今年发布的翻调&amp;原创手书PV</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/festival/lty10th?bvid=BV1zS4y1J7ba&spm_id_from=333.337.search-card.all.click">洛天依十周年演唱会版</a></p>
-<p><img src="/images/3-1.jpg"></p>
-<blockquote>
-<p>“三行印刷体便概括的诞生　和普通人也没有什么差别                                                                                                        </p>
-<p>但有趣的事我能说上整晚　你却动也不动　卜昼卜夜</p>
-</blockquote>
-<p>她的诞生简简单单，只用三行简约的文字，便能一言以蔽之。但是她的存在，让无数人为之动容。萍水相逢，却能激起心中的无穷涟漪，留下一片<strong>纯蓝</strong>的天地。</p>
-<p>7月12日，本是一个平平无奇的日子，没有庆典，无人在意。但是就是在2012年的这一天，洛天依诞生在了这世界上，她开启了一段永远不会变老的人生，影响了许多原本与音乐、与vocaloid不会发生任何关联的人，唱出了人们心中的歌。本曲目是由我们的老朋友，COP老师，于2021年洛天依的诞生之日发布的生贺曲，这首曲子也在洛天依十周年演唱会上重新演唱，<del>（让人惊讶的是，她这次没有鸽）</del>。那一年，COP老师还是一个初三生，因为一个非常偶然的机会，知晓了<strong>她</strong>的存在，也是从那一刻起，开始为<strong>她</strong>坚持不懈地创作歌曲。</p>
-<blockquote>
-<p>三千天也没能唱尽的旧作　离平凡的我显得那么遥远                                                                          </p>
-<p>你空白的世界任人涂抹采撷　是一生难抵的乐园</p>
-</blockquote>
-<p>九年的时光（一眨眼，现在已经十二年了，时光不等人啊），三千天的陪伴。”你把歌声分我一半，我把灵魂分你一半“，陪伴是最长情的告白，纵使二次元与三次元的界限无法跨越，一生难以抵达，一个愿意写歌，一个愿意唱歌，足矣。</p>
-<blockquote>
-<p>从诞生烙上永恒的偏见　被平白污蔑无法张口辩解 　                                                                        </p>
-<p>流不下博得同情的眼泪　好在你本就浑然不觉 　                                                                                </p>
-<p>从诞生得到无条件称赞　被推到舞台最前风暴扑面</p>
-</blockquote>
-<p>她的诞生一直饱受争议，她的走过的道路崎岖难行。虚拟的歌声让很多现实的听众难以接受，或是难以忍受嘈杂的电子音，或是鄙夷她唱歌的能力。诚然，世界上没有一种技术自诞生时就是完美无缺的，早期的v3声库确有缺陷，但这不足以否认洛天依存在的意义。种种非议，她听不到，浑然不觉。但是她始终微笑，不断向前。从第一首中文传说曲目的诞生，到今年“无限共鸣”演唱会的完美落幕，“走自己的路，让别人说去吧”。</p>
-<p>轻轻点缀的琴声，娓娓道来的语气，平淡的歌声如小桥流水，潺潺流动。没有热烈的表白，没有过激的动作，这般唠家常的轻松适然，春风化雨般滋润了每个听众的心田。“十年也好百年也好,这颗星球依旧富饶 ;当孩子们打着呼哨,争论话题太过老套”。人之生也有限，不必在意百年之后，后人对你是非功过的评说，只需“为下一个陌生人绽放同样微笑”。在肉体埋入灰土、在精神魂归天堂之前，此刻的心意相连便足以给生命以意义，“朴素而天下莫能与之争也”。</p>
-<blockquote>
-<p>至少此刻我们的心意相连　愿那片纯蓝天空一般高远 　　　                                                              </p>
-<p>因为你是我的骄傲　因为这些话被嘲笑                                                                                                               </p>
-<p>炽热的心渐渐被失望浇灭　冰凉的脸渐渐拂去融雪 　　　                                                                                   </p>
-<p>厌恶也好喜欢也好　你什么都无法知道 　　                                                                                                        </p>
-<p>是多么的幸福又多么遗憾”</p>
-</blockquote>
-<p>撰写此文前，作者本人也顺带重温了COP老师其他的写给洛天依的生贺曲目，从《为了你唱下去》，到《不停歇的旅途》，再到《haru》,以及十周年大放异彩的《光与影的对白》，以及<del>鸽了很久</del>的《XXX原创》，能就生贺这一固定的题材，从不同的角度、不同的情景进行创作，不仅需要深厚的功底，更不可或缺的是对自己所从事事业的热爱与矢志不渝。这里引用一下她在<a target="_blank" rel="noopener" href="https://www.bilibili.com/opus/683157442507309111?spm_id_from=333.1387.0.0">光与我们的的对白</a>这篇文章中的话。</p>
-<blockquote>
-<p>​	我想我用V创作的初心就是，我在这个圈子听到太多创作者唱出了自己，我也想成为他们中的一员，而正因为天依是虚拟的，她才是鲜活的，我们才都得以在天依身上映出自己的影子，感受独属于自己的共鸣。</p>
-<p>​	 这十年，创作对我来说不是坚持，是一种需要，是我在整日的疲惫后、消极的情绪中得以暂避的一方天地。 只有在在创作中，痛苦才变得有价值，成为灵感的养分；只有敲下音符时，世界上的一切事都与我无关，我忘记了一切不快乐。创作和虚拟歌姬早就成了我生活的一部分。</p>
-<p>​    我的生命是有限的，但我可以用创作留下永恒的东西，这是多么有意义的事呀。</p>
-<p>​    谢谢你看到这里，也谢谢你听过我们的歌。                                                                      </p>
-</blockquote>
-<p>世界上所有美好与苦难，通通都坠入那片纯蓝。</p>
-<p>有趣的一点是，这首歌曲在最开始”三行印刷体便概括的诞生“这一句有一处上引号，在”是多么的幸福又多么遗憾“这一句后面接上了一个下引号。<strong>只有最后一句歌词没有被引号括起来</strong>。</p>
-<p>也许被引号括起来的话，是我们对她说的话。那这最后一句话，便是她对我们的回应：</p>
-<blockquote>
-<p>我怎会不知你挚爱纯蓝</p>
-</blockquote>
-<p>本文作者：<em>wingtings</em> @wingtings<br>修订、发布：<strong>USTC学生虚拟歌手创作文化与歌声合成研究小组</strong></p>
-<p><strong>特别鸣谢：愿意看到这里的每一位读者，以及每一个默默为中文术力口社区为爱发电的创作者</strong></p>
-<p><strong>愿我们的友谊长存！</strong></p>
+        <h1 id="pvz-ustc改版制作开发日志"><a href="#pvz-ustc改版制作开发日志" class="headerlink" title="pvz-ustc改版制作开发日志"></a>pvz-ustc改版制作开发日志</h1><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>寒假闲的无聊，偶然习得pvz改版开发的一些有趣的技能，正巧本人的科学社会研讨课题正是游戏开发相关，本来正愁着没有合适的选题，这下是踏破铁鞋无觅处——得来全不费功夫！</p>
+<h2 id="2025-2-25"><a href="#2025-2-25" class="headerlink" title="2025.2.25"></a>2025.2.25</h2><p>开始写一些文案、策划之类的，准备一下要实现的功能、特性、素材等，属于是收集灵感阶段。现在的初步设想是，在不惊动官方的情况下，将ustc的一些特色融入其中，而且不会非常露骨、刺眼。</p>
+<p>背景设定：你是ustc的一员，为了保卫自己的GPA，你要面对来自淑芬、力学、线代等气势汹汹的敌人的进攻，但你不是孤身一人，你的手上有许多蝌蝻专属的道具和武器。请利用你的谋略和场地优势，构造出绝妙的策略，将敌人尽数击退吧。</p>
+<p>一些创意，想到了就写一点：</p>
+<ul>
+<li>场地中会出现暖气片，会减缓敌人的速度</li>
+<li>遇到jwc僵尸时，如果它吃掉了你的一个植物（土豆地雷爆炸也算）会让你的GPA变为原来的40%</li>
+<li>过关目标：打完僵尸，打完僵尸后按照GPA划分关卡等级</li>
+<li>绿色圆圈</li>
+<li>洗澡</li>
+<li>大物实验</li>
+<li>分专业关卡，分为五个大关，数院、物院、花园、计算机、生院。需要设计关卡特色僵尸</li>
+</ul>
+<p>姑且先写到这里，找个时间画画素材</p>
 
       
     </div>
@@ -364,7 +325,7 @@
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E4%B8%AD%E6%96%87vocaloid/" rel="tag">中文vocaloid</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a></li></ul>
 
 
     </footer>
@@ -372,35 +333,19 @@
   
   <nav id="article-nav" data-aos="fade-up">
     
-      <div class="article-nav-link-wrap article-nav-link-left">
-        
-          
-          
-            <img data-src="/images/banner.webp" data-sizes="auto" alt="pvz-ustc开发日志" class="lazyload">
-          
-        
-        <a href="/2025/02/25/pvz-ustc%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/"></a>
-        <div class="article-nav-caption">Newer</div>
-        <h3 class="article-nav-title">
-          
-            pvz-ustc开发日志
-          
-        </h3>
-      </div>
-    
     
     <div class="article-nav-link-wrap article-nav-link-right">
       
         
         
-          <img data-src="/images/banner.webp" data-sizes="auto" alt="1.st 世末歌者" class="lazyload">
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="3rd.「纯蓝」" class="lazyload">
         
       
-      <a href="/2024/10/22/1st%E3%80%8C%E4%B8%96%E6%9C%AB%E6%AD%8C%E8%80%85%E3%80%8D/"></a>
+      <a href="/2024/12/01/3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D/"></a>
       <div class="article-nav-caption">Older</div>
       <h3 class="article-nav-title">
         
-          1.st 世末歌者
+          3rd.「纯蓝」
         
       </h3>
     </div>
@@ -475,7 +420,7 @@
   <h3 class="toc-title">Contents</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D"><span class="toc-number">1.</span> <span class="toc-text">3rd.「纯蓝」</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pvz-ustc%E6%94%B9%E7%89%88%E5%88%B6%E4%BD%9C%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97"><span class="toc-number">1.</span> <span class="toc-text">pvz-ustc改版制作开发日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-number">1.1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2025-2-25"><span class="toc-number">1.2.</span> <span class="toc-text">2025.2.25</span></a></li></ol></li></ol>
       
   </div>
 </div>
@@ -617,13 +562,13 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "wingtings",
-          title: "3rd.「纯蓝」",
-          url: "http://localhost:4000/2024/12/01/3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D/",
+          title: "pvz-ustc开发日志",
+          url: "http://localhost:4000/2025/02/25/pvz-ustc%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/",
           excerpt: "",
           description: "",
-          stripContent: "写稿日期：2024 12 1 发布日期：2024 12 14 3rd.「纯蓝」P主：COPY 投稿日期：2021 7 12 B站原视频链接指路 网易云链接 Recommended by @轼然sota（迭羽P） 迭羽老师今年发布的翻调&amp;amp;原创手书PV 洛天依十周年演唱会版   “三行印刷体便概括的诞生 和普通人也没有什么差别                                                                                    ",
-          date: "Sun Dec 01 2024 21:22:47 GMT+0800",
-          updated: "Fri Feb 14 2025 21:41:44 GMT+0800",
+          stripContent: "pvz-ustc改版制作开发日志起因寒假闲的无聊，偶然习得pvz改版开发的一些有趣的技能，正巧本人的科学社会研讨课题正是游戏开发相关，本来正愁着没有合适的选题，这下是踏破铁鞋无觅处——得来全不费功夫！ 2025.2.25开始写一些文案、策划之类的，准备一下要实现的功能、特性、素材等，属于是收集灵感阶段。现在的初步设想是，在不惊动官方的情况下，将ustc的一些特色融入其中，而且不会非常露骨、刺眼。 背景设定：你是ustc的一员，为了保卫自己的GPA，你要面对来自淑芬、力学、线代等气势汹汹的敌人的进",
+          date: "Tue Feb 25 2025 23:13:42 GMT+0800",
+          updated: "Tue Feb 25 2025 23:31:55 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
