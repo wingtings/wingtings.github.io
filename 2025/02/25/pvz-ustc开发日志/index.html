@@ -35,7 +35,7 @@
 <meta property="og:description" content="pvz-ustc改版制作开发日志起因寒假闲的无聊，偶然习得pvz改版开发的一些有趣的技能，正巧本人的科学社会研讨课题正是游戏开发相关，本来正愁着没有合适的选题，这下是踏破铁鞋无觅处——得来全不费功夫！ 2025.2.25开始写一些文案、策划之类的，准备一下要实现的功能、特性、素材等，属于是收集灵感阶段。现在的初步设想是，在不惊动官方的情况下，将ustc的一些特色融入其中，而且不会非常露骨、刺眼。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-02-25T15:13:42.000Z">
-<meta property="article:modified_time" content="2025-02-25T15:31:55.183Z">
+<meta property="article:modified_time" content="2025-03-03T14:10:35.629Z">
 <meta property="article:author" content="wingtings">
 <meta property="article:tag" content="开发">
 <meta name="twitter:card" content="summary">
@@ -199,7 +199,7 @@
   <h3 class="toc-title">Contents</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pvz-ustc%E6%94%B9%E7%89%88%E5%88%B6%E4%BD%9C%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97"><span class="toc-number">1.</span> <span class="toc-text">pvz-ustc改版制作开发日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-number">1.1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2025-2-25"><span class="toc-number">1.2.</span> <span class="toc-text">2025.2.25</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pvz-ustc%E6%94%B9%E7%89%88%E5%88%B6%E4%BD%9C%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97"><span class="toc-number">1.</span> <span class="toc-text">pvz-ustc改版制作开发日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-number">1.1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2025-2-25"><span class="toc-number">1.2.</span> <span class="toc-text">2025.2.25</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2025-3-3"><span class="toc-number">1.3.</span> <span class="toc-text">2025.3.3</span></a></li></ol></li></ol>
       
   </div>
 </div>
@@ -285,7 +285,7 @@
       <div class="article-date">
   <a href="/2025/02/25/pvz-ustc%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-02-25T15:13:42.000Z" itemprop="datePublished">2025-02-25</time>
-    <time style="display: none;" id="post-update-time">2025-02-25</time>
+    <time style="display: none;" id="post-update-time">2025-03-03</time>
   </a>
 </div>
 
@@ -304,7 +304,7 @@
 <p>一些创意，想到了就写一点：</p>
 <ul>
 <li>场地中会出现暖气片，会减缓敌人的速度</li>
-<li>遇到jwc僵尸时，如果它吃掉了你的一个植物（土豆地雷爆炸也算）会让你的GPA变为原来的40%</li>
+<li><del>遇到jwc僵尸时，如果它吃掉了你的一个植物（土豆地雷爆炸也算）会让你的GPA变为原来的40%</del></li>
 <li>过关目标：打完僵尸，打完僵尸后按照GPA划分关卡等级</li>
 <li>绿色圆圈</li>
 <li>洗澡</li>
@@ -312,6 +312,10 @@
 <li>分专业关卡，分为五个大关，数院、物院、花园、计算机、生院。需要设计关卡特色僵尸</li>
 </ul>
 <p>姑且先写到这里，找个时间画画素材</p>
+<h2 id="2025-3-3"><a href="#2025-3-3" class="headerlink" title="2025.3.3"></a>2025.3.3</h2><p>改版要在原版的基础上进行修改，文案部分储存在properties文件夹的LawnStrings文档中，这里我选择使用pvz汉化一版来制作改版。</p>
+<p>游戏贴图在main.pak文件中，需要使用pvz tools或者wpf修改器进行解包，然后再打包。</p>
+<p>游戏的机制代码修改需要使用反汇编原理，使用cheat engine(CE)和OllyDebug（OD)进行代码修改和注入，这也是最核心的技术栈，需要花时间处理（补药用迪普西克，不然能让你笑出猪叫），还是太吃操作了，每天想起来就做一点罢。</p>
+<p>直播修改文案中，植物方初稿写好了，僵尸方正在设计，改文案改吐了，尝试去添加贴图素材</p>
 
       
     </div>
@@ -337,7 +341,7 @@
         
           
           
-            <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="2025年3月USTC歌声合成技术协会中术推歌" class="lazyload">
+            <img data-src="/images/banner.webp" data-sizes="auto" alt="2025年3月USTC歌声合成技术协会中术推歌" class="lazyload">
           
         
         <a href="/2025/03/01/2025%E5%B9%B43%E6%9C%88USTC%E6%AD%8C%E5%A3%B0%E5%90%88%E6%88%90%E6%8A%80%E6%9C%AF%E5%8D%8F%E4%BC%9A%E4%B8%AD%E6%9C%AF%E6%8E%A8%E6%AD%8C/"></a>
@@ -354,7 +358,7 @@
       
         
         
-          <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="3rd.「纯蓝」" class="lazyload">
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="3rd.「纯蓝」" class="lazyload">
         
       
       <a href="/2024/12/01/3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D/"></a>
@@ -401,10 +405,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        4.6k
+        4.8k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:14
+        00:15
       </div>
     
     
@@ -436,7 +440,7 @@
   <h3 class="toc-title">Contents</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pvz-ustc%E6%94%B9%E7%89%88%E5%88%B6%E4%BD%9C%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97"><span class="toc-number">1.</span> <span class="toc-text">pvz-ustc改版制作开发日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-number">1.1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2025-2-25"><span class="toc-number">1.2.</span> <span class="toc-text">2025.2.25</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pvz-ustc%E6%94%B9%E7%89%88%E5%88%B6%E4%BD%9C%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97"><span class="toc-number">1.</span> <span class="toc-text">pvz-ustc改版制作开发日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-number">1.1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2025-2-25"><span class="toc-number">1.2.</span> <span class="toc-text">2025.2.25</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2025-3-3"><span class="toc-number">1.3.</span> <span class="toc-text">2025.3.3</span></a></li></ol></li></ol>
       
   </div>
 </div>
@@ -584,7 +588,7 @@
           description: "",
           stripContent: "pvz-ustc改版制作开发日志起因寒假闲的无聊，偶然习得pvz改版开发的一些有趣的技能，正巧本人的科学社会研讨课题正是游戏开发相关，本来正愁着没有合适的选题，这下是踏破铁鞋无觅处——得来全不费功夫！ 2025.2.25开始写一些文案、策划之类的，准备一下要实现的功能、特性、素材等，属于是收集灵感阶段。现在的初步设想是，在不惊动官方的情况下，将ustc的一些特色融入其中，而且不会非常露骨、刺眼。 背景设定：你是ustc的一员，为了保卫自己的GPA，你要面对来自淑芬、力学、线代等气势汹汹的敌人的进",
           date: "Tue Feb 25 2025 23:13:42 GMT+0800",
-          updated: "Tue Feb 25 2025 23:31:55 GMT+0800",
+          updated: "Mon Mar 03 2025 22:10:35 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
