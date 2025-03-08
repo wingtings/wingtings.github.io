@@ -12,7 +12,7 @@
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_bq08450reo';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};</script>
   
   <title>
-    3rd.「纯蓝」 |
+    Manim 学习笔记 |
     
     wingtings
   </title>
@@ -27,20 +27,20 @@
 
   
   
-    <meta name="description" content="写稿日期：2024 12 1 发布日期：2024 12 14 3rd.「纯蓝」P主：COPY 投稿日期：2021 7 12 B站原视频链接指路 网易云链接 Recommended by @轼然sota（迭羽P） 迭羽老师今年发布的翻调&amp;原创手书PV 洛天依十周年演唱会版   “三行印刷体便概括的诞生　和普通人也没有什么差别">
+    <meta name="description" content="Manim是一个用来制作精美数学物理动画的软件。  具体的下载配置参考乐正垂星在b站上的教程https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1om411k7Fv&#x2F;?spm_id_from&#x3D;333.337.search-card.all.click&amp;vd_source&#x3D;664bee53c86bfd3e072a77c585e3b350 主要需要配置的东西：mamba(封装py">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3rd.「纯蓝」">
-<meta property="og:url" content="http://localhost:4000/2024/12/01/3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D/index.html">
+<meta property="og:title" content="Manim 学习笔记">
+<meta property="og:url" content="http://localhost:4000/2025/03/08/Manim-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="wingtings">
-<meta property="og:description" content="写稿日期：2024 12 1 发布日期：2024 12 14 3rd.「纯蓝」P主：COPY 投稿日期：2021 7 12 B站原视频链接指路 网易云链接 Recommended by @轼然sota（迭羽P） 迭羽老师今年发布的翻调&amp;原创手书PV 洛天依十周年演唱会版   “三行印刷体便概括的诞生　和普通人也没有什么差别">
+<meta property="og:description" content="Manim是一个用来制作精美数学物理动画的软件。  具体的下载配置参考乐正垂星在b站上的教程https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1om411k7Fv&#x2F;?spm_id_from&#x3D;333.337.search-card.all.click&amp;vd_source&#x3D;664bee53c86bfd3e072a77c585e3b350 主要需要配置的东西：mamba(封装py">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://localhost:4000/images/3-1.jpg">
-<meta property="article:published_time" content="2024-12-01T13:22:47.000Z">
-<meta property="article:modified_time" content="2025-02-14T13:41:44.014Z">
+<meta property="og:image" content="http://localhost:4000/images/5-1.png">
+<meta property="article:published_time" content="2025-03-08T05:05:39.000Z">
+<meta property="article:modified_time" content="2025-03-08T08:47:31.564Z">
 <meta property="article:author" content="wingtings">
-<meta property="article:tag" content="中文vocaloid">
+<meta property="article:tag" content="开发">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://localhost:4000/images/3-1.jpg">
+<meta name="twitter:image" content="http://localhost:4000/images/5-1.png">
   
   
     <link rel="alternate" href="/atom.xml" title="wingtings" type="application/atom+xml">
@@ -167,7 +167,7 @@
       
     </picture>
     
-      <img fetchpriority="high" src="/images/banner.webp" alt="3rd.「纯蓝」">
+      <img fetchpriority="high" src="/images/banner.webp" alt="Manim 学习笔记">
     
   
   <div id="header-outer">
@@ -176,7 +176,7 @@
         
         
           <a href="/" id="logo">
-            <h1 data-aos="slide-up">3rd.「纯蓝」</h1>
+            <h1 data-aos="slide-up">Manim 学习笔记</h1>
           </a>
         
       
@@ -201,7 +201,7 @@
   <h3 class="toc-title">Contents</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D"><span class="toc-number">1.</span> <span class="toc-text">3rd.「纯蓝」</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E7%9A%84%E4%B8%8B%E8%BD%BD%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">具体的下载配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%95%99%E7%A8%8B%E5%92%8C%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">一些教程和实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">基本结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scene%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%96%B9%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">Scene的四个方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mobject"><span class="toc-number">2.3.</span> <span class="toc-text">Mobject</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#animate-syntax"><span class="toc-number">2.4.</span> <span class="toc-text">.animate syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.5.</span> <span class="toc-text">文本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.6.</span> <span class="toc-text">坐标系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%8F%98%E6%8D%A2"><span class="toc-number">2.7.</span> <span class="toc-text">数学公式变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ThreeDScene"><span class="toc-number">2.8.</span> <span class="toc-text">ThreeDScene</span></a></li></ol></li></ol>
       
   </div>
 </div>
@@ -281,13 +281,13 @@
   </div>
 </aside>
 
-          <section id="main"><article id="post-3rd-「纯蓝」" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="post-Manim-学习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
-  <a href="/2024/12/01/3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D/" class="article-date-link" data-aos="zoom-in">
-    <time datetime="2024-12-01T13:22:47.000Z" itemprop="datePublished">2024-12-01</time>
-    <time style="display: none;" id="post-update-time">2025-02-14</time>
+  <a href="/2025/03/08/Manim-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2025-03-08T05:05:39.000Z" itemprop="datePublished">2025-03-08</time>
+    <time style="display: none;" id="post-update-time">2025-03-08</time>
   </a>
 </div>
 
@@ -300,57 +300,73 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <p><strong>写稿日期：2024 12 1</strong></p>
-<p><strong>发布日期：2024 12 14</strong></p>
-<h1 id="3rd-「纯蓝」"><a href="#3rd-「纯蓝」" class="headerlink" title="3rd.「纯蓝」"></a>3rd.「纯蓝」</h1><p><strong>P主：COPY</strong></p>
-<p><strong>投稿日期：2021 7 12</strong></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1z64y1b7H4/?spm_id_from=333.337.search-card.all.click">B站原视频链接指路</a></p>
-<p><a target="_blank" rel="noopener" href="https://music.163.com/#/song/1864974747/">网易云链接</a></p>
-<p><strong>Recommended by @轼然sota（迭羽P）</strong></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV181421k71Z/?spm_id_from=333.1387.0.0&vd_source=664bee53c86bfd3e072a77c585e3b350">迭羽老师今年发布的翻调&amp;原创手书PV</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/festival/lty10th?bvid=BV1zS4y1J7ba&spm_id_from=333.337.search-card.all.click">洛天依十周年演唱会版</a></p>
-<p><img src="/images/3-1.jpg"></p>
-<blockquote>
-<p>“三行印刷体便概括的诞生　和普通人也没有什么差别                                                                                                        </p>
-<p>但有趣的事我能说上整晚　你却动也不动　卜昼卜夜</p>
-</blockquote>
-<p>她的诞生简简单单，只用三行简约的文字，便能一言以蔽之。但是她的存在，让无数人为之动容。萍水相逢，却能激起心中的无穷涟漪，留下一片<strong>纯蓝</strong>的天地。</p>
-<p>7月12日，本是一个平平无奇的日子，没有庆典，无人在意。但是就是在2012年的这一天，洛天依诞生在了这世界上，她开启了一段永远不会变老的人生，影响了许多原本与音乐、与vocaloid不会发生任何关联的人，唱出了人们心中的歌。本曲目是由我们的老朋友，COP老师，于2021年洛天依的诞生之日发布的生贺曲，这首曲子也在洛天依十周年演唱会上重新演唱，<del>（让人惊讶的是，她这次没有鸽）</del>。那一年，COP老师还是一个初三生，因为一个非常偶然的机会，知晓了<strong>她</strong>的存在，也是从那一刻起，开始为<strong>她</strong>坚持不懈地创作歌曲。</p>
-<blockquote>
-<p>三千天也没能唱尽的旧作　离平凡的我显得那么遥远                                                                          </p>
-<p>你空白的世界任人涂抹采撷　是一生难抵的乐园</p>
-</blockquote>
-<p>九年的时光（一眨眼，现在已经十二年了，时光不等人啊），三千天的陪伴。”你把歌声分我一半，我把灵魂分你一半“，陪伴是最长情的告白，纵使二次元与三次元的界限无法跨越，一生难以抵达，一个愿意写歌，一个愿意唱歌，足矣。</p>
-<blockquote>
-<p>从诞生烙上永恒的偏见　被平白污蔑无法张口辩解 　                                                                        </p>
-<p>流不下博得同情的眼泪　好在你本就浑然不觉 　                                                                                </p>
-<p>从诞生得到无条件称赞　被推到舞台最前风暴扑面</p>
-</blockquote>
-<p>她的诞生一直饱受争议，她的走过的道路崎岖难行。虚拟的歌声让很多现实的听众难以接受，或是难以忍受嘈杂的电子音，或是鄙夷她唱歌的能力。诚然，世界上没有一种技术自诞生时就是完美无缺的，早期的v3声库确有缺陷，但这不足以否认洛天依存在的意义。种种非议，她听不到，浑然不觉。但是她始终微笑，不断向前。从第一首中文传说曲目的诞生，到今年“无限共鸣”演唱会的完美落幕，“走自己的路，让别人说去吧”。</p>
-<p>轻轻点缀的琴声，娓娓道来的语气，平淡的歌声如小桥流水，潺潺流动。没有热烈的表白，没有过激的动作，这般唠家常的轻松适然，春风化雨般滋润了每个听众的心田。“十年也好百年也好,这颗星球依旧富饶 ;当孩子们打着呼哨,争论话题太过老套”。人之生也有限，不必在意百年之后，后人对你是非功过的评说，只需“为下一个陌生人绽放同样微笑”。在肉体埋入灰土、在精神魂归天堂之前，此刻的心意相连便足以给生命以意义，“朴素而天下莫能与之争也”。</p>
-<blockquote>
-<p>至少此刻我们的心意相连　愿那片纯蓝天空一般高远 　　　                                                              </p>
-<p>因为你是我的骄傲　因为这些话被嘲笑                                                                                                               </p>
-<p>炽热的心渐渐被失望浇灭　冰凉的脸渐渐拂去融雪 　　　                                                                                   </p>
-<p>厌恶也好喜欢也好　你什么都无法知道 　　                                                                                                        </p>
-<p>是多么的幸福又多么遗憾”</p>
-</blockquote>
-<p>撰写此文前，作者本人也顺带重温了COP老师其他的写给洛天依的生贺曲目，从《为了你唱下去》，到《不停歇的旅途》，再到《haru》,以及十周年大放异彩的《光与影的对白》，以及<del>鸽了很久</del>的《XXX原创》，能就生贺这一固定的题材，从不同的角度、不同的情景进行创作，不仅需要深厚的功底，更不可或缺的是对自己所从事事业的热爱与矢志不渝。这里引用一下她在<a target="_blank" rel="noopener" href="https://www.bilibili.com/opus/683157442507309111?spm_id_from=333.1387.0.0">光与我们的的对白</a>这篇文章中的话。</p>
-<blockquote>
-<p>​	我想我用V创作的初心就是，我在这个圈子听到太多创作者唱出了自己，我也想成为他们中的一员，而正因为天依是虚拟的，她才是鲜活的，我们才都得以在天依身上映出自己的影子，感受独属于自己的共鸣。</p>
-<p>​	 这十年，创作对我来说不是坚持，是一种需要，是我在整日的疲惫后、消极的情绪中得以暂避的一方天地。 只有在在创作中，痛苦才变得有价值，成为灵感的养分；只有敲下音符时，世界上的一切事都与我无关，我忘记了一切不快乐。创作和虚拟歌姬早就成了我生活的一部分。</p>
-<p>​    我的生命是有限的，但我可以用创作留下永恒的东西，这是多么有意义的事呀。</p>
-<p>​    谢谢你看到这里，也谢谢你听过我们的歌。                                                                      </p>
-</blockquote>
-<p>世界上所有美好与苦难，通通都坠入那片纯蓝。</p>
-<p>有趣的一点是，这首歌曲在最开始”三行印刷体便概括的诞生“这一句有一处上引号，在”是多么的幸福又多么遗憾“这一句后面接上了一个下引号。<strong>只有最后一句歌词没有被引号括起来</strong>。</p>
-<p>也许被引号括起来的话，是我们对她说的话。那这最后一句话，便是她对我们的回应：</p>
-<blockquote>
-<p>我怎会不知你挚爱纯蓝</p>
-</blockquote>
-<p>本文作者：<em>wingtings</em> @wingtings<br>修订、发布：<strong>USTC学生虚拟歌手创作文化与歌声合成研究小组</strong></p>
-<p><strong>特别鸣谢：愿意看到这里的每一位读者，以及每一个默默为中文术力口社区为爱发电的创作者</strong></p>
-<p><strong>愿我们的友谊长存！</strong></p>
+        <p>Manim是一个用来制作精美数学物理动画的软件。 </p>
+<h1 id="具体的下载配置"><a href="#具体的下载配置" class="headerlink" title="具体的下载配置"></a>具体的下载配置</h1><p>参考乐正垂星在b站上的教程<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1om411k7Fv/?spm_id_from=333.337.search-card.all.click&vd_source=664bee53c86bfd3e072a77c585e3b350">https://www.bilibili.com/video/BV1om411k7Fv/?spm_id_from=333.337.search-card.all.click&amp;vd_source=664bee53c86bfd3e072a77c585e3b350</a></p>
+<p>主要需要配置的东西：mamba(封装python虚拟环境)，miniforge(用来连接开源站方便下载)，在manimce里面要下载ffmpeg(视频格式转换)，miktex(配置latex环境)，其中的一些下载已经过时，需要使用最新的版本。强烈建议对配置环境这种麻烦活具有丰富经验的人再继续(说实话几个小时配这个是真磨炼心性。。。)</p>
+<p>顺带一提vscode里面有个十分方便的插件Manim sideview，可以预览视频效果。</p>
+<h1 id="一些教程和实现"><a href="#一些教程和实现" class="headerlink" title="一些教程和实现"></a>一些教程和实现</h1><p>在python框架下实现的代码，也会用到一些其他的库（如numpy），采用面向对象的方法实现。</p>
+<p>一个不错的图文教程<a target="_blank" rel="noopener" href="https://www.wolai.com/gargantua/uwhP7DTetSkovs2QutYoAr">https://www.wolai.com/gargantua/uwhP7DTetSkovs2QutYoAr</a></p>
+<h2 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h2><p>manim主要有含有三个对象：Scene、Animation、Mobject。</p>
+<h2 id="Scene的四个方法"><a href="#Scene的四个方法" class="headerlink" title="Scene的四个方法"></a>Scene的四个方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> manim <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Try</span>(<span class="title class_ inherited__">Scene</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">construct</span>(<span class="params">self</span>):</span><br><span class="line">        c = Circle(fill_opacity=<span class="number">1</span>)</span><br><span class="line">        s = Square(color=YELLOW, fill_opacity=<span class="number">1</span>)</span><br><span class="line">        <span class="variable language_">self</span>.play(FadeIn(c))</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br><span class="line">        <span class="variable language_">self</span>.play(ReplacementTransform(c, s))</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br><span class="line">        <span class="variable language_">self</span>.play(FadeOut(s))</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br></pre></td></tr></table></figure>
+
+<p>首先定一个类，再定义一个对象self，这样就布置好了一个Scene。</p>
+<ul>
+<li>add()			：添加物体到场景中</li>
+<li>remove()	 ：移除物体</li>
+<li>play()           ：展示动画效果</li>
+<li>wait()           ：中间等待几秒时间，不然会同时开始</li>
+</ul>
+<h2 id="Mobject"><a href="#Mobject" class="headerlink" title="Mobject"></a>Mobject</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">blue_circle = Circle(color=BLUE, fill_opacity=<span class="number">0.5</span>)</span><br><span class="line">green_square = Square(color=GREEN, fill_opacity=<span class="number">0.8</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在 Manim 中，<code>Mobject</code> 是所有图形对象的基类。以下是一些常见的 <code>Mobject</code> 子类：</p>
+<ol>
+<li><strong><code>VMobject</code></strong>：矢量图形对象的基类。</li>
+<li><strong><code>Text</code></strong>：用于显示文本。</li>
+<li><strong><code>Tex</code></strong>：用于显示 LaTeX 公式。</li>
+<li><strong><code>Circle</code></strong>：圆形对象。</li>
+<li><strong><code>Square</code></strong>：正方形对象。</li>
+<li><strong><code>Polygon</code></strong>：多边形对象。</li>
+<li><strong><code>Line</code></strong>：线段对象。</li>
+<li><strong><code>Dot</code></strong>：点对象。</li>
+<li><strong><code>Arrow</code></strong>：箭头对象。</li>
+<li><strong><code>ImageMobject</code></strong>：图像对象。</li>
+</ol>
+<p><img src="/images/5-1.png"></p>
+<p>这些 <code>Mobject</code> 子类可以组合、变换和动画化，以创建复杂的动画效果。像这样直接定义出了物体，同时配置了几个参数</p>
+<ul>
+<li>DrawBorderThenFill()	出现方式，先画边框再填充</li>
+<li>FadeIn()                            出现方式，浮现出来  </li>
+<li>Transform（s1,s2）       转换变形对象</li>
+<li>FadeOut()                         退出方式，淡出视野</li>
+</ul>
+<p>还有一些特殊的可调参数（其实也可以这么搞,等价表述）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">circle = Circle()</span><br><span class="line">blue_circle = circle.set_color(BLUE).set_opacity(<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>fill_opacity	不透明度</li>
+<li>color              颜色</li>
+<li>fill_color        内部填充颜色</li>
+</ul>
+<h2 id="animate-syntax"><a href="#animate-syntax" class="headerlink" title=".animate syntax"></a>.animate syntax</h2><ul>
+<li>shift(填方向)</li>
+<li>rotate(PI角度)</li>
+<li>Rotate(对象，angle&#x3D;角度，axis&#x3D;旋转的坐标轴 , runtime&#x3D;时间)</li>
+<li>next_to(对象，方向，buff&#x3D;0.5)</li>
+</ul>
+<h2 id="文本操作"><a href="#文本操作" class="headerlink" title="文本操作"></a>文本操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">label=Tex(<span class="string">&quot;Hello&quot;</span>)</span><br><span class="line">   <span class="variable language_">self</span>.play(Write(label))	//直接写字</span><br><span class="line">   <span class="variable language_">self</span>.play()</span><br></pre></td></tr></table></figure>
+
+<h2 id="坐标系统"><a href="#坐标系统" class="headerlink" title="坐标系统"></a>坐标系统</h2><ul>
+<li>添加一个二维网格plane&#x3D; NumberPlane()      self.add(plane)</li>
+<li>move_to([1,0,1],aligned_edge&#x3D;方向)	&#x2F;&#x2F;一共八个方向，U , D , R , L , UL , UR , DL , DR</li>
+<li>set_x，set_y，set_z</li>
+<li>next_to(对象，direction&#x3D;，)</li>
+<li>get_center()     获得中心坐标   &#x2F;&#x2F;get_top()  bottom left right x y z corner等等</li>
+</ul>
+<h2 id="数学公式变换"><a href="#数学公式变换" class="headerlink" title="数学公式变换"></a>数学公式变换</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TransformEquation</span>(<span class="title class_ inherited__">Scene</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">construct</span>(<span class="params">self</span>):</span><br><span class="line">        eq1 = MathTex(<span class="string">&quot;42 &#123;&#123; a^2 &#125;&#125; + &#123;&#123; b^2 &#125;&#125; = &#123;&#123; c^2 &#125;&#125;&quot;</span>)</span><br><span class="line">        eq2 = MathTex(<span class="string">&quot;42 &#123;&#123; a^2 &#125;&#125; = &#123;&#123; c^2 &#125;&#125; - &#123;&#123; b^2 &#125;&#125;&quot;</span>)</span><br><span class="line">        eq3 = MathTex(<span class="string">r&quot;a^2 = \frac&#123;c^2 - b^2&#125;&#123;42&#125;&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.add(eq1)</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br><span class="line">        <span class="variable language_">self</span>.play(TransformMatchingTex(eq1, eq2))</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br><span class="line">        <span class="variable language_">self</span>.play(TransformMatchingShapes(eq2, eq3))</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br></pre></td></tr></table></figure>
+
+<p>Write(公式对象)是最简单的实现方法</p>
+<p>**TransformMatchingTex() **和 **TransformMatchingShapes()**可以实现公式之间的转换，有些许的区别</p>
+<h2 id="ThreeDScene"><a href="#ThreeDScene" class="headerlink" title="ThreeDScene"></a>ThreeDScene</h2><p> 创建三维场景（代价是渲染起来非常慢），要学会移动摄像机</p>
 
       
     </div>
@@ -364,7 +380,7 @@
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E4%B8%AD%E6%96%87vocaloid/" rel="tag">中文vocaloid</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a></li></ul>
 
 
     </footer>
@@ -372,35 +388,19 @@
   
   <nav id="article-nav" data-aos="fade-up">
     
-      <div class="article-nav-link-wrap article-nav-link-left">
-        
-          
-          
-            <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="pvz-ustc开发日志" class="lazyload">
-          
-        
-        <a href="/2025/02/25/pvz-ustc%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/"></a>
-        <div class="article-nav-caption">Newer</div>
-        <h3 class="article-nav-title">
-          
-            pvz-ustc开发日志
-          
-        </h3>
-      </div>
-    
     
     <div class="article-nav-link-wrap article-nav-link-right">
       
         
         
-          <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="1st.「世末歌者」" class="lazyload">
+          <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="2025年3月USTC歌声合成技术协会中术推歌" class="lazyload">
         
       
-      <a href="/2024/10/22/1st%E3%80%8C%E4%B8%96%E6%9C%AB%E6%AD%8C%E8%80%85%E3%80%8D/"></a>
+      <a href="/2025/03/01/2025%E5%B9%B43%E6%9C%88USTC%E6%AD%8C%E5%A3%B0%E5%90%88%E6%88%90%E6%8A%80%E6%9C%AF%E5%8D%8F%E4%BC%9A%E4%B8%AD%E6%9C%AF%E6%8E%A8%E6%AD%8C/"></a>
       <div class="article-nav-caption">Older</div>
       <h3 class="article-nav-title">
         
-          1st.「世末歌者」
+          2025年3月USTC歌声合成技术协会中术推歌
         
       </h3>
     </div>
@@ -475,7 +475,7 @@
   <h3 class="toc-title">Contents</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D"><span class="toc-number">1.</span> <span class="toc-text">3rd.「纯蓝」</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E7%9A%84%E4%B8%8B%E8%BD%BD%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">具体的下载配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%95%99%E7%A8%8B%E5%92%8C%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">一些教程和实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">基本结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scene%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%96%B9%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">Scene的四个方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mobject"><span class="toc-number">2.3.</span> <span class="toc-text">Mobject</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#animate-syntax"><span class="toc-number">2.4.</span> <span class="toc-text">.animate syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.5.</span> <span class="toc-text">文本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.6.</span> <span class="toc-text">坐标系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%8F%98%E6%8D%A2"><span class="toc-number">2.7.</span> <span class="toc-text">数学公式变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ThreeDScene"><span class="toc-number">2.8.</span> <span class="toc-text">ThreeDScene</span></a></li></ol></li></ol>
       
   </div>
 </div>
@@ -617,13 +617,13 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "wingtings",
-          title: "3rd.「纯蓝」",
-          url: "http://localhost:4000/2024/12/01/3rd-%E3%80%8C%E7%BA%AF%E8%93%9D%E3%80%8D/",
+          title: "Manim 学习笔记",
+          url: "http://localhost:4000/2025/03/08/Manim-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/",
           excerpt: "",
           description: "",
-          stripContent: "写稿日期：2024 12 1 发布日期：2024 12 14 3rd.「纯蓝」P主：COPY 投稿日期：2021 7 12 B站原视频链接指路 网易云链接 Recommended by @轼然sota（迭羽P） 迭羽老师今年发布的翻调&amp;amp;原创手书PV 洛天依十周年演唱会版   “三行印刷体便概括的诞生 和普通人也没有什么差别                                                                                    ",
-          date: "Sun Dec 01 2024 21:22:47 GMT+0800",
-          updated: "Fri Feb 14 2025 21:41:44 GMT+0800",
+          stripContent: "Manim是一个用来制作精美数学物理动画的软件。  具体的下载配置参考乐正垂星在b站上的教程https://www.bilibili.com/video/BV1om411k7Fv/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=664bee53c86bfd3e072a77c585e3b350 主要需要配置的东西：mamba(封装python虚拟环境)，miniforge(用来连接开源站方便下载)，在manimce里面要下载ffmp",
+          date: "Sat Mar 08 2025 13:05:39 GMT+0800",
+          updated: "Sat Mar 08 2025 16:47:31 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
