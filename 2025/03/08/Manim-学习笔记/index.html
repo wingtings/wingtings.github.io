@@ -39,13 +39,11 @@
 <meta property="og:site_name" content="wingtings">
 <meta property="og:description" content="Manim是一个用来制作精美数学物理动画的软件。  具体的下载配置参考乐正垂星在b站上的教程https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1om411k7Fv&#x2F;?spm_id_from&#x3D;333.337.search-card.all.click&amp;vd_source&#x3D;664bee53c86bfd3e072a77c585e3b350 主要需要配置的东西：mamba(封装py">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://localhost:4000/images/5-1.png">
 <meta property="article:published_time" content="2025-03-08T05:05:39.000Z">
-<meta property="article:modified_time" content="2025-03-08T08:47:31.564Z">
+<meta property="article:modified_time" content="2025-03-21T14:17:38.037Z">
 <meta property="article:author" content="wingtings">
 <meta property="article:tag" content="开发">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://localhost:4000/images/5-1.png">
   
   
     <link rel="alternate" href="/atom.xml" title="wingtings" type="application/atom+xml">
@@ -368,7 +366,7 @@
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-03-08T05:05:39.000Z" itemprop="datePublished">2025-03-08</time>
-    <time style="display: none;" id="post-update-time">2025-03-08</time>
+    <time style="display: none;" id="post-update-time">2025-03-21</time>
   </span>
 </div>
 
@@ -390,7 +388,7 @@
 <h1 id="一些教程和实现"><a href="#一些教程和实现" class="headerlink" title="一些教程和实现"></a>一些教程和实现</h1><p>在python框架下实现的代码，也会用到一些其他的库（如numpy），采用面向对象的方法实现。</p>
 <p>一个不错的图文教程<a target="_blank" rel="noopener" href="https://www.wolai.com/gargantua/uwhP7DTetSkovs2QutYoAr">https://www.wolai.com/gargantua/uwhP7DTetSkovs2QutYoAr</a></p>
 <h2 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h2><p>manim主要有含有三个对象：Scene、Animation、Mobject。</p>
-<h2 id="Scene的四个方法"><a href="#Scene的四个方法" class="headerlink" title="Scene的四个方法"></a>Scene的四个方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> manim <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Try</span>(<span class="title class_ inherited__">Scene</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">construct</span>(<span class="params">self</span>):</span><br><span class="line">        c = Circle(fill_opacity=<span class="number">1</span>)</span><br><span class="line">        s = Square(color=YELLOW, fill_opacity=<span class="number">1</span>)</span><br><span class="line">        <span class="variable language_">self</span>.play(FadeIn(c))</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br><span class="line">        <span class="variable language_">self</span>.play(ReplacementTransform(c, s))</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br><span class="line">        <span class="variable language_">self</span>.play(FadeOut(s))</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br></pre></td></tr></table></figure>
+<h2 id="Scene的四个方法"><a href="#Scene的四个方法" class="headerlink" title="Scene的四个方法"></a>Scene的四个方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> manim <span class="hljs-keyword">import</span> *<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Try</span>(<span class="hljs-title class_ inherited__">Scene</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">construct</span>(<span class="hljs-params">self</span>):<br>        c = Circle(fill_opacity=<span class="hljs-number">1</span>)<br>        s = Square(color=YELLOW, fill_opacity=<span class="hljs-number">1</span>)<br>        <span class="hljs-variable language_">self</span>.play(FadeIn(c))<br>        <span class="hljs-variable language_">self</span>.wait()<br>        <span class="hljs-variable language_">self</span>.play(ReplacementTransform(c, s))<br>        <span class="hljs-variable language_">self</span>.wait()<br>        <span class="hljs-variable language_">self</span>.play(FadeOut(s))<br>        <span class="hljs-variable language_">self</span>.wait()<br></code></pre></td></tr></table></figure>
 
 <p>首先定一个类，再定义一个对象self，这样就布置好了一个Scene。</p>
 <ul>
@@ -399,7 +397,7 @@
 <li>play()           ：展示动画效果</li>
 <li>wait()           ：中间等待几秒时间，不然会同时开始</li>
 </ul>
-<h2 id="Mobject"><a href="#Mobject" class="headerlink" title="Mobject"></a>Mobject</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">blue_circle = Circle(color=BLUE, fill_opacity=<span class="number">0.5</span>)</span><br><span class="line">green_square = Square(color=GREEN, fill_opacity=<span class="number">0.8</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="Mobject"><a href="#Mobject" class="headerlink" title="Mobject"></a>Mobject</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">blue_circle = Circle(color=BLUE, fill_opacity=<span class="hljs-number">0.5</span>)<br>green_square = Square(color=GREEN, fill_opacity=<span class="hljs-number">0.8</span>)<br></code></pre></td></tr></table></figure>
 
 <p>在 Manim 中，<code>Mobject</code> 是所有图形对象的基类。以下是一些常见的 <code>Mobject</code> 子类：</p>
 <ol>
@@ -414,7 +412,6 @@
 <li><strong><code>Arrow</code></strong>：箭头对象。</li>
 <li><strong><code>ImageMobject</code></strong>：图像对象。</li>
 </ol>
-<p><img src="/images/5-1.png"></p>
 <p>这些 <code>Mobject</code> 子类可以组合、变换和动画化，以创建复杂的动画效果。像这样直接定义出了物体，同时配置了几个参数</p>
 <ul>
 <li>DrawBorderThenFill()	出现方式，先画边框再填充</li>
@@ -423,7 +420,7 @@
 <li>FadeOut()                         退出方式，淡出视野</li>
 </ul>
 <p>还有一些特殊的可调参数（其实也可以这么搞,等价表述）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">circle = Circle()</span><br><span class="line">blue_circle = circle.set_color(BLUE).set_opacity(<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">circle = Circle()<br>blue_circle = circle.set_color(BLUE).set_opacity(<span class="hljs-number">0.5</span>)<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>fill_opacity	不透明度</li>
@@ -436,7 +433,7 @@
 <li>Rotate(对象，angle&#x3D;角度，axis&#x3D;旋转的坐标轴 , runtime&#x3D;时间)</li>
 <li>next_to(对象，方向，buff&#x3D;0.5)</li>
 </ul>
-<h2 id="文本操作"><a href="#文本操作" class="headerlink" title="文本操作"></a>文本操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">label=Tex(<span class="string">&quot;Hello&quot;</span>)</span><br><span class="line">   <span class="variable language_">self</span>.play(Write(label))	//直接写字</span><br><span class="line">   <span class="variable language_">self</span>.play()</span><br></pre></td></tr></table></figure>
+<h2 id="文本操作"><a href="#文本操作" class="headerlink" title="文本操作"></a>文本操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">label=Tex(<span class="hljs-string">&quot;Hello&quot;</span>)<br>   <span class="hljs-variable language_">self</span>.play(Write(label))	//直接写字<br>   <span class="hljs-variable language_">self</span>.play()<br></code></pre></td></tr></table></figure>
 
 <h2 id="坐标系统"><a href="#坐标系统" class="headerlink" title="坐标系统"></a>坐标系统</h2><ul>
 <li>添加一个二维网格plane&#x3D; NumberPlane()      self.add(plane)</li>
@@ -445,7 +442,7 @@
 <li>next_to(对象，direction&#x3D;，)</li>
 <li>get_center()     获得中心坐标   &#x2F;&#x2F;get_top()  bottom left right x y z corner等等</li>
 </ul>
-<h2 id="数学公式变换"><a href="#数学公式变换" class="headerlink" title="数学公式变换"></a>数学公式变换</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TransformEquation</span>(<span class="title class_ inherited__">Scene</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">construct</span>(<span class="params">self</span>):</span><br><span class="line">        eq1 = MathTex(<span class="string">&quot;42 &#123;&#123; a^2 &#125;&#125; + &#123;&#123; b^2 &#125;&#125; = &#123;&#123; c^2 &#125;&#125;&quot;</span>)</span><br><span class="line">        eq2 = MathTex(<span class="string">&quot;42 &#123;&#123; a^2 &#125;&#125; = &#123;&#123; c^2 &#125;&#125; - &#123;&#123; b^2 &#125;&#125;&quot;</span>)</span><br><span class="line">        eq3 = MathTex(<span class="string">r&quot;a^2 = \frac&#123;c^2 - b^2&#125;&#123;42&#125;&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.add(eq1)</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br><span class="line">        <span class="variable language_">self</span>.play(TransformMatchingTex(eq1, eq2))</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br><span class="line">        <span class="variable language_">self</span>.play(TransformMatchingShapes(eq2, eq3))</span><br><span class="line">        <span class="variable language_">self</span>.wait()</span><br></pre></td></tr></table></figure>
+<h2 id="数学公式变换"><a href="#数学公式变换" class="headerlink" title="数学公式变换"></a>数学公式变换</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">TransformEquation</span>(<span class="hljs-title class_ inherited__">Scene</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">construct</span>(<span class="hljs-params">self</span>):<br>        eq1 = MathTex(<span class="hljs-string">&quot;42 &#123;&#123; a^2 &#125;&#125; + &#123;&#123; b^2 &#125;&#125; = &#123;&#123; c^2 &#125;&#125;&quot;</span>)<br>        eq2 = MathTex(<span class="hljs-string">&quot;42 &#123;&#123; a^2 &#125;&#125; = &#123;&#123; c^2 &#125;&#125; - &#123;&#123; b^2 &#125;&#125;&quot;</span>)<br>        eq3 = MathTex(<span class="hljs-string">r&quot;a^2 = \frac&#123;c^2 - b^2&#125;&#123;42&#125;&quot;</span>)<br>        <span class="hljs-variable language_">self</span>.add(eq1)<br>        <span class="hljs-variable language_">self</span>.wait()<br>        <span class="hljs-variable language_">self</span>.play(TransformMatchingTex(eq1, eq2))<br>        <span class="hljs-variable language_">self</span>.wait()<br>        <span class="hljs-variable language_">self</span>.play(TransformMatchingShapes(eq2, eq3))<br>        <span class="hljs-variable language_">self</span>.wait()<br></code></pre></td></tr></table></figure>
 
 <p>Write(公式对象)是最简单的实现方法</p>
 <p>**TransformMatchingTex() **和 **TransformMatchingShapes()**可以实现公式之间的转换，有些许的区别</p>
@@ -529,7 +526,7 @@
       
         
         
-          <img data-src="images/bg2.png" data-sizes="auto" alt="2025年3月USTC歌声合成技术协会中术推歌" class="lazyload">
+          <img data-src="images/bg1.png" data-sizes="auto" alt="2025年3月USTC歌声合成技术协会中术推歌" class="lazyload">
         
       
       <a href="/2025/03/01/2025%E5%B9%B43%E6%9C%88USTC%E6%AD%8C%E5%A3%B0%E5%90%88%E6%88%90%E6%8A%80%E6%9C%AF%E5%8D%8F%E4%BC%9A%E4%B8%AD%E6%9C%AF%E6%8E%A8%E6%AD%8C/"></a>
@@ -922,7 +919,7 @@
           description: "",
           stripContent: "Manim是一个用来制作精美数学物理动画的软件。  具体的下载配置参考乐正垂星在b站上的教程https://www.bilibili.com/video/BV1om411k7Fv/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=664bee53c86bfd3e072a77c585e3b350 主要需要配置的东西：mamba(封装python虚拟环境)，miniforge(用来连接开源站方便下载)，在manimce里面要下载ffmp",
           date: "Sat Mar 08 2025 13:05:39 GMT+0800",
-          updated: "Sat Mar 08 2025 16:47:31 GMT+0800",
+          updated: "Fri Mar 21 2025 22:17:38 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
