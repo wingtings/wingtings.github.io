@@ -682,7 +682,7 @@ a {
   letter-spacing: 2px;
   display: inline-block;
   transform: translateY(-20%);
-  text-shadow: 0 0.2rem 0.3rem rgba(0,0,0,0.5);
+  text-shadow: 0 0 0.5rem rgba(0,0,0,0.7);
 }
 @media screen and (max-width: 959px) {
   #logo {
@@ -703,7 +703,7 @@ a {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 1px;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
 }
 @media screen and (max-width: 959px) {
   #subtitle {
