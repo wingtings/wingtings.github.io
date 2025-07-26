@@ -35,6 +35,10 @@
           element.querySelectorAll("td.code .line").length > expandThreshold)
       ) {
         element.classList.add("code-closed");
+        // force rerender element to refresh AOS
+        element.style.display = "none";
+        void element.offsetWidth;
+        element.style.display = "";
       }
     }
   });
@@ -91,7 +95,7 @@
         tips.copyright?.enable &&
         selectedText.length >= tips.copyright?.count
       ) {
-        selectedText = selectedText + "\n\n" + tips.copyright?.content ?? "";
+        selectedText = selectedText + "\n\n" + (tips.copyright?.content ?? "");
       }
       return selectedText;
     },
@@ -99,7 +103,18 @@
   clipboard.on("success", (e) => {
     e.trigger.classList.add("icon-check");
     e.trigger.classList.remove("icon-copy");
-    _$("#copy-tooltip").innerText = tips.success;
+    const successConfig = tips.success;
+    let successText = "Copy successfully (*^▽^*)";
+    if (typeof successConfig === "string") {
+      successText = successConfig;
+    } else if (typeof successConfig === "object") {
+      const lang = document.documentElement.lang;
+      const key = Object.keys(successConfig).find(key => key.toLowerCase() === lang.toLowerCase());
+      if (key && successConfig[key]) {
+        successText = successConfig[key];
+      }
+    }
+    _$("#copy-tooltip").innerText = successText;
     _$("#copy-tooltip").style.opacity = 1;
     setTimeout(() => {
       _$("#copy-tooltip").style.opacity = 0;
@@ -112,7 +127,18 @@
   clipboard.on("error", (e) => {
     e.trigger.classList.add("icon-times");
     e.trigger.classList.remove("icon-copy");
-    _$("#copy-tooltip").innerText = tips.fail;
+    const failConfig = tips.fail;
+    let failText = "Copy failed (ﾟ⊿ﾟ)ﾂ";
+    if (typeof failConfig === "string") {
+      failText = failConfig;
+    } else if (typeof failConfig === "object") {
+      const lang = document.documentElement.lang;
+      const key = Object.keys(failConfig).find(key => key.toLowerCase() === lang.toLowerCase());
+      if (key && failConfig[key]) {
+        failText = failConfig[key];
+      }
+    }
+    _$("#copy-tooltip").innerText = failText;
     _$("#copy-tooltip").style.opacity = 1;
     setTimeout(() => {
       _$("#copy-tooltip").style.opacity = 0;
@@ -130,5 +156,10 @@
       },
       { once: true }
     );
+  }
+
+  // Since we add code-closed class to the figure element, we need to refresh AOS
+  if (window.AOS) {
+    AOS.refresh();
   }
 })();

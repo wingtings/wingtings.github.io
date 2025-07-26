@@ -34,12 +34,12 @@ _$$(
     // iconfont
     element.innerHTML = window.REIMU_CONFIG.anchor_icon
       ? `&#x${window.REIMU_CONFIG.anchor_icon};`
-      : "&#xe635;";
+      : window.REIMU_CONFIG.anchor_icon === false ? "" : "&#xe635;";
   } else {
     // fontawesome
     element.innerHTML = window.REIMU_CONFIG.anchor_icon
       ? `&#x${window.REIMU_CONFIG.anchor_icon};`
-      : "&#xf292;";
+      : window.REIMU_CONFIG.anchor_icon === false ? "" : "&#xf292;";
   }
 });
 
@@ -403,3 +403,13 @@ _$(".share-icon.icon-weixin")
         });
     });
   });
+
+
+var imgElement = _$("#header > img");
+if (imgElement.src || imgElement.style.background) {
+  window.bannerElement = imgElement;
+} else {
+  window.bannerElement = _$("#header > picture img");
+}
+
+window.generateSchemeHandler?.();

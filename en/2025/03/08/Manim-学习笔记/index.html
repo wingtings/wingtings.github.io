@@ -1,0 +1,1000 @@
+
+  <!DOCTYPE html>
+  <html lang="en"  
+    
+      data-theme-mode="auto"
+    
+  >
+  <head>
+  
+  <meta charset="utf-8">
+  
+
+  
+
+  
+  <script async src="https://hm.baidu.com/hm.js?true"></script>
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    _hmt.push(["_trackPageview", location.pathname]);
+  </script>
+
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = 'All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!';window.REIMU_CONFIG.outdate = {"enable":true,"daysAgo":180,"message":{"en":"This article was last updated on {time}. Please note that the content may no longer be applicable.","zh-CN":"本文最后更新于 {time}，请注意文中内容可能已不适用。","zh-TW":"本文最後更新於 {time}，請注意文中內容可能已不適用。","ja":"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。"}};window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://localhost:4000';window.REIMU_CONFIG.i18n_languages = ["en"];</script>
+  
+  <title>
+    Manim 学习笔记 |
+    
+    wingtings
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="../../../../../css/loader.css">
+
+  
+  
+    <meta name="description" content="Manim是一个用来制作精美数学物理动画的软件。  具体的下载配置参考乐正垂星在b站上的教程https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1om411k7Fv&#x2F;?spm_id_from&#x3D;333.337.search-card.all.click&amp;vd_source&#x3D;664bee53c86bfd3e072a77c585e3b350 主要需要配置的东西：mamba(封装py">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Manim 学习笔记">
+<meta property="og:url" content="http://localhost:4000/en/2025/03/08/Manim-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="wingtings">
+<meta property="og:description" content="Manim是一个用来制作精美数学物理动画的软件。  具体的下载配置参考乐正垂星在b站上的教程https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1om411k7Fv&#x2F;?spm_id_from&#x3D;333.337.search-card.all.click&amp;vd_source&#x3D;664bee53c86bfd3e072a77c585e3b350 主要需要配置的东西：mamba(封装py">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-08T05:05:39.000Z">
+<meta property="article:modified_time" content="2025-03-21T14:44:20.557Z">
+<meta property="article:author" content="wingtings">
+<meta property="article:tag" content="开发">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="alternate" href="../../../../../atom.xml" title="wingtings" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="../../../../../images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="../../../../../css/style.css">
+
+  <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt+HsAtOaUsXwJGRb4&#x2F;SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous">
+
+  
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      
+      
+        
+      
+      <div class="loading-word">Loading...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+<div id="heatmap-tooltip"></div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/en/../../../../../index.html">Home</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/en/../../../../../archives">Archives</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/en/../../../../../about">About</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/en/../../../../../friend">Friend</a>
+        </span>
+      
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="../../../../../atom.xml" title="RSS Feed" target="_blank"></a>
+    
+    
+    
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="Search"></a>
+    
+  </nav>
+  
+    
+    <nav id="i18n-nav">
+      <div class="custom-dropdown">
+        <div class="select-selected" id="select-selected">
+          <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
+          <span id="selected-lang">English</span>
+        </div>
+        <ul class="select-items" id="select-items">
+          
+            <li data-value="zh-CN" >简体中文</li>
+          
+            <li data-value="en" class="selected">English</li>
+          
+        </ul>
+      </div>
+      <script>
+        var selectSelected = document.getElementById("select-selected");
+        var selectedLang = document.getElementById("selected-lang");
+        var selectItems = document.getElementById("select-items");
+        var selectOptions = selectItems.querySelectorAll("li");
+
+        selectSelected.addEventListener("click", () => {
+          selectItems.classList.toggle("show");
+        });
+
+        selectOptions.forEach((item) => {
+          item.addEventListener("click", () => {
+            const langMap = {};
+            
+              langMap['zh-CN'] = '/2025/03/08/Manim-学习笔记/';
+            
+              langMap['en'] = '/en/2025/03/08/Manim-学习笔记/';
+            
+            selectedLang.textContent = item.textContent;
+            selectItems.classList.remove("show");
+            selectOptions.forEach((option) => {
+              option.classList.remove("selected");
+            });
+            item.classList.add("selected");
+            window.location = langMap[item.dataset.value];
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".custom-dropdown")) {
+            selectItems.classList.remove("show");
+          }
+        });
+      </script>
+    </nav>
+  
+</div>
+<header id="header">
+  
+    <picture></picture>
+    <img style="position: absolute;top: 0;left: 0;width: 100%;height: 150%;z-index: -2;display: block;background: rgb(255,117,117);mask: linear-gradient(to top, transparent, #fff 50%);"></img>
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="../../../../../index.html" id="logo">
+            <h1 data-aos="slide-up">Manim 学习笔记</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content" class="sidebar-left"  >
+          <aside id="sidebar">
+  
+  
+  
+  <div class="sidebar-wrapper wrap-sticky">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        
+          <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E7%9A%84%E4%B8%8B%E8%BD%BD%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">具体的下载配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%95%99%E7%A8%8B%E5%92%8C%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">一些教程和实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">基本结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scene%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%96%B9%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">Scene的四个方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mobject"><span class="toc-number">2.3.</span> <span class="toc-text">Mobject</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#animate-syntax"><span class="toc-number">2.4.</span> <span class="toc-text">.animate syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.5.</span> <span class="toc-text">文本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.6.</span> <span class="toc-text">坐标系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%8F%98%E6%8D%A2"><span class="toc-number">2.7.</span> <span class="toc-text">数学公式变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ThreeDScene"><span class="toc-number">2.8.</span> <span class="toc-text">ThreeDScene</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="wingtings" class="lazyload">
+  <div class="sidebar-author-name">wingtings</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Post</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Category</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tag</div>
+    <div class="sidebar-state-number">2</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-email sidebar-social-icon">
+      <a href=mailto:wuwt@mail.ustc.edu.cn itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/wingtings itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-bilibili sidebar-social-icon">
+      <a href=https://space.bilibili.com/3493114285131904 itemprop="url" target="_blank" aria-label="bilibili" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-zhihu sidebar-social-icon">
+      <a href=https://www.zhihu.com/people/5-66-64-12-24 itemprop="url" target="_blank" aria-label="zhihu" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-steam sidebar-social-icon">
+      <a href=https://steamcommunity.com/profiles/76561199859960390/ itemprop="url" target="_blank" aria-label="steam" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/" aria-label="Home"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/archives" aria-label="Archives"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/about" aria-label="About"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/friend" aria-label="Friend"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+    
+  
+</div>
+</div>
+        
+      
+      
+        
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+        
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+  
+  </div>
+  
+</aside>
+
+          <section id="main"><article id="post-Manim-学习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link" data-aos="zoom-in">
+    <time datetime="2025-03-08T05:05:39.000Z" itemprop="datePublished">2025-03-08</time>
+    <time style="display: none;" id="post-update-time">2025-03-21</time>
+  </span>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote id="outdate-blockquote" style="display: none;"><p></p></blockquote>
+      
+      
+        <p>Manim是一个用来制作精美数学物理动画的软件。 </p>
+<h1 id="具体的下载配置"><a href="#具体的下载配置" class="headerlink" title="具体的下载配置"></a>具体的下载配置</h1><p>参考乐正垂星在b站上的教程<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1om411k7Fv/?spm_id_from=333.337.search-card.all.click&vd_source=664bee53c86bfd3e072a77c585e3b350">https://www.bilibili.com/video/BV1om411k7Fv/?spm_id_from=333.337.search-card.all.click&amp;vd_source=664bee53c86bfd3e072a77c585e3b350</a></p>
+<p>主要需要配置的东西：mamba(封装python虚拟环境)，miniforge(用来连接开源站方便下载)，在manimce里面要下载ffmpeg(视频格式转换)，miktex(配置latex环境)，其中的一些下载已经过时，需要使用最新的版本。强烈建议对配置环境这种麻烦活具有丰富经验的人再继续(说实话几个小时配这个是真磨炼心性。。。)</p>
+<p>顺带一提vscode里面有个十分方便的插件Manim sideview，可以预览视频效果。</p>
+<h1 id="一些教程和实现"><a href="#一些教程和实现" class="headerlink" title="一些教程和实现"></a>一些教程和实现</h1><p>在python框架下实现的代码，也会用到一些其他的库（如numpy），采用面向对象的方法实现。</p>
+<p>一个不错的图文教程<a target="_blank" rel="noopener" href="https://www.wolai.com/gargantua/uwhP7DTetSkovs2QutYoAr">https://www.wolai.com/gargantua/uwhP7DTetSkovs2QutYoAr</a></p>
+<h2 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h2><p>manim主要有含有三个对象：Scene、Animation、Mobject。</p>
+<h2 id="Scene的四个方法"><a href="#Scene的四个方法" class="headerlink" title="Scene的四个方法"></a>Scene的四个方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> manim <span class="hljs-keyword">import</span> *<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Try</span>(<span class="hljs-title class_ inherited__">Scene</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">construct</span>(<span class="hljs-params">self</span>):<br>        c = Circle(fill_opacity=<span class="hljs-number">1</span>)<br>        s = Square(color=YELLOW, fill_opacity=<span class="hljs-number">1</span>)<br>        <span class="hljs-variable language_">self</span>.play(FadeIn(c))<br>        <span class="hljs-variable language_">self</span>.wait()<br>        <span class="hljs-variable language_">self</span>.play(ReplacementTransform(c, s))<br>        <span class="hljs-variable language_">self</span>.wait()<br>        <span class="hljs-variable language_">self</span>.play(FadeOut(s))<br>        <span class="hljs-variable language_">self</span>.wait()<br></code></pre></td></tr></table></figure>
+
+<p>首先定一个类，再定义一个对象self，这样就布置好了一个Scene。</p>
+<ul>
+<li>add()			：添加物体到场景中</li>
+<li>remove()	 ：移除物体</li>
+<li>play()           ：展示动画效果</li>
+<li>wait()           ：中间等待几秒时间，不然会同时开始</li>
+</ul>
+<h2 id="Mobject"><a href="#Mobject" class="headerlink" title="Mobject"></a>Mobject</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">blue_circle = Circle(color=BLUE, fill_opacity=<span class="hljs-number">0.5</span>)<br>green_square = Square(color=GREEN, fill_opacity=<span class="hljs-number">0.8</span>)<br></code></pre></td></tr></table></figure>
+
+<p>在 Manim 中，<code>Mobject</code> 是所有图形对象的基类。以下是一些常见的 <code>Mobject</code> 子类：</p>
+<ol>
+<li><strong><code>VMobject</code></strong>：矢量图形对象的基类。</li>
+<li><strong><code>Text</code></strong>：用于显示文本。</li>
+<li><strong><code>Tex</code></strong>：用于显示 LaTeX 公式。</li>
+<li><strong><code>Circle</code></strong>：圆形对象。</li>
+<li><strong><code>Square</code></strong>：正方形对象。</li>
+<li><strong><code>Polygon</code></strong>：多边形对象。</li>
+<li><strong><code>Line</code></strong>：线段对象。</li>
+<li><strong><code>Dot</code></strong>：点对象。</li>
+<li><strong><code>Arrow</code></strong>：箭头对象。</li>
+<li><strong><code>ImageMobject</code></strong>：图像对象。</li>
+</ol>
+<p>这些 <code>Mobject</code> 子类可以组合、变换和动画化，以创建复杂的动画效果。像这样直接定义出了物体，同时配置了几个参数</p>
+<ul>
+<li>DrawBorderThenFill()	出现方式，先画边框再填充</li>
+<li>FadeIn()                            出现方式，浮现出来  </li>
+<li>Transform（s1,s2）       转换变形对象</li>
+<li>FadeOut()                         退出方式，淡出视野</li>
+</ul>
+<p>还有一些特殊的可调参数（其实也可以这么搞,等价表述）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">circle = Circle()<br>blue_circle = circle.set_color(BLUE).set_opacity(<span class="hljs-number">0.5</span>)<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>fill_opacity	不透明度</li>
+<li>color              颜色</li>
+<li>fill_color        内部填充颜色</li>
+</ul>
+<h2 id="animate-syntax"><a href="#animate-syntax" class="headerlink" title=".animate syntax"></a>.animate syntax</h2><ul>
+<li>shift(填方向)</li>
+<li>rotate(PI角度)</li>
+<li>Rotate(对象，angle&#x3D;角度，axis&#x3D;旋转的坐标轴 , runtime&#x3D;时间)</li>
+<li>next_to(对象，方向，buff&#x3D;0.5)</li>
+</ul>
+<h2 id="文本操作"><a href="#文本操作" class="headerlink" title="文本操作"></a>文本操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">label=Tex(<span class="hljs-string">&quot;Hello&quot;</span>)<br>   <span class="hljs-variable language_">self</span>.play(Write(label))	//直接写字<br>   <span class="hljs-variable language_">self</span>.play()<br></code></pre></td></tr></table></figure>
+
+<h2 id="坐标系统"><a href="#坐标系统" class="headerlink" title="坐标系统"></a>坐标系统</h2><ul>
+<li>添加一个二维网格plane&#x3D; NumberPlane()      self.add(plane)</li>
+<li>move_to([1,0,1],aligned_edge&#x3D;方向)	&#x2F;&#x2F;一共八个方向，U , D , R , L , UL , UR , DL , DR</li>
+<li>set_x，set_y，set_z</li>
+<li>next_to(对象，direction&#x3D;，)</li>
+<li>get_center()     获得中心坐标   &#x2F;&#x2F;get_top()  bottom left right x y z corner等等</li>
+</ul>
+<h2 id="数学公式变换"><a href="#数学公式变换" class="headerlink" title="数学公式变换"></a>数学公式变换</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">TransformEquation</span>(<span class="hljs-title class_ inherited__">Scene</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">construct</span>(<span class="hljs-params">self</span>):<br>        eq1 = MathTex(<span class="hljs-string">&quot;42 &#123;&#123; a^2 &#125;&#125; + &#123;&#123; b^2 &#125;&#125; = &#123;&#123; c^2 &#125;&#125;&quot;</span>)<br>        eq2 = MathTex(<span class="hljs-string">&quot;42 &#123;&#123; a^2 &#125;&#125; = &#123;&#123; c^2 &#125;&#125; - &#123;&#123; b^2 &#125;&#125;&quot;</span>)<br>        eq3 = MathTex(<span class="hljs-string">r&quot;a^2 = \frac&#123;c^2 - b^2&#125;&#123;42&#125;&quot;</span>)<br>        <span class="hljs-variable language_">self</span>.add(eq1)<br>        <span class="hljs-variable language_">self</span>.wait()<br>        <span class="hljs-variable language_">self</span>.play(TransformMatchingTex(eq1, eq2))<br>        <span class="hljs-variable language_">self</span>.wait()<br>        <span class="hljs-variable language_">self</span>.play(TransformMatchingShapes(eq2, eq3))<br>        <span class="hljs-variable language_">self</span>.wait()<br></code></pre></td></tr></table></figure>
+
+<p>Write(公式对象)是最简单的实现方法</p>
+<p>**TransformMatchingTex() **和 **TransformMatchingShapes()**可以实现公式之间的转换，有些许的区别</p>
+<h2 id="ThreeDScene"><a href="#ThreeDScene" class="headerlink" title="ThreeDScene"></a>ThreeDScene</h2><p> 创建三维场景（代价是渲染起来非常慢），要学会移动摄像机</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+        <div class="share-wrapper">
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F2025%2F03%2F08%2FManim-%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2F" target="_blank" rel="noopener noreferrer" title="Manim 学习笔记">
+      <div class="share-icon icon icon-facebook">
+        
+      </div>
+    </a>
+  
+    <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4000%2F2025%2F03%2F08%2FManim-%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2F&amp;text=Manim%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&amp;via=http%3A%2F%2Flocalhost%3A4000" target="_blank" rel="noopener noreferrer" title="Manim 学习笔记">
+      <div class="share-icon icon icon-twitter">
+        
+      </div>
+    </a>
+  
+    <a href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A4000%2F2025%2F03%2F08%2FManim-%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2F&amp;title=Manim%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&amp;summary=Manim%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&amp;mini=true&amp;ro=true" target="_blank" rel="noopener noreferrer" title="Manim 学习笔记">
+      <div class="share-icon icon icon-linkedin">
+        
+      </div>
+    </a>
+  
+    <a href="https://www.reddit.com/submit?url=http%3A%2F%2Flocalhost%3A4000%2F2025%2F03%2F08%2FManim-%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2F&amp;title=Manim%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0" target="_blank" rel="noopener noreferrer" title="Manim 学习笔记">
+      <div class="share-icon icon icon-reddit">
+        
+      </div>
+    </a>
+  
+    <a href="https://service.weibo.com/share/share.php?url=http%3A%2F%2Flocalhost%3A4000%2F2025%2F03%2F08%2FManim-%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2F&amp;appkey=&amp;title=Manim%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&amp;pic=&amp;ralateUid=" target="_blank" rel="noopener noreferrer" title="Manim 学习笔记">
+      <div class="share-icon icon icon-weibo">
+        
+      </div>
+    </a>
+  
+    <a href="https://connect.qq.com/widget/shareqq/index.html?url=www.baidu.com&amp;title=Manim%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&amp;desc=Manim%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&amp;source=http%3A%2F%2Flocalhost%3A4000" target="_blank" rel="noopener noreferrer" title="Manim 学习笔记">
+      <div class="share-icon icon icon-qq">
+        
+      </div>
+    </a>
+  
+    <a href="javascript:;"  title="Manim 学习笔记">
+      <div class="share-icon icon icon-weixin">
+        
+          <div id="share-weixin">
+            <div class="share-weixin-dom">
+              <div class="share-weixin-content">
+                <img id="share-weixin-banner"> 
+                <div id="share-weixin-title"></div>
+                <div id="share-weixin-desc"></div>
+              </div>
+              <div class="share-weixin-qrcode">
+                <div class="share-weixin-info">
+                  <div id="share-weixin-author"></div>
+                  <div id="share-weixin-theme">Powered By hexo-theme-reimu</div>
+                </div>
+                <img id="share-weixin-qr" >
+              </div>
+            </div>
+            <div class="share-weixin-canvas"></div>
+          </div>
+        
+      </div>
+    </a>
+  
+</div>
+      
+      
+      
+      
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/../../../../../tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+  <nav id="article-nav" data-aos="fade-up">
+    
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="2025年3月USTC歌声合成技术协会中术推歌" class="lazyload">
+        
+      
+      <a href="/en/2025/03/01/2025%E5%B9%B43%E6%9C%88USTC%E6%AD%8C%E5%A3%B0%E5%90%88%E6%88%90%E6%8A%80%E6%9C%AF%E5%8D%8F%E4%BC%9A%E4%B8%AD%E6%9C%AF%E6%8E%A8%E6%AD%8C/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          2025年3月USTC歌声合成技术协会中术推歌
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+</section>
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      
+      
+      
+        2020-2025
+      
+      <span class="footer-info-sep rotate"></span>
+      wingtings
+    </div>
+    
+      <div>
+        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        7.1k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        00:23
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E7%9A%84%E4%B8%8B%E8%BD%BD%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">具体的下载配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%95%99%E7%A8%8B%E5%92%8C%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">一些教程和实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">基本结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scene%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%96%B9%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">Scene的四个方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mobject"><span class="toc-number">2.3.</span> <span class="toc-text">Mobject</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#animate-syntax"><span class="toc-number">2.4.</span> <span class="toc-text">.animate syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.5.</span> <span class="toc-text">文本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.6.</span> <span class="toc-text">坐标系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%8F%98%E6%8D%A2"><span class="toc-number">2.7.</span> <span class="toc-text">数学公式变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ThreeDScene"><span class="toc-number">2.8.</span> <span class="toc-text">ThreeDScene</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="wingtings" class="lazyload">
+  <div class="sidebar-author-name">wingtings</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Post</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Category</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tag</div>
+    <div class="sidebar-state-number">2</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-email sidebar-social-icon">
+      <a href=mailto:wuwt@mail.ustc.edu.cn itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/wingtings itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-bilibili sidebar-social-icon">
+      <a href=https://space.bilibili.com/3493114285131904 itemprop="url" target="_blank" aria-label="bilibili" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-zhihu sidebar-social-icon">
+      <a href=https://www.zhihu.com/people/5-66-64-12-24 itemprop="url" target="_blank" aria-label="zhihu" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-steam sidebar-social-icon">
+      <a href=https://steamcommunity.com/profiles/76561199859960390/ itemprop="url" target="_blank" aria-label="steam" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/" aria-label="Home"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/archives" aria-label="Archives"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/about" aria-label="About"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/friend" aria-label="Friend"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+    
+  
+</div>
+</div>
+      
+    
+  </div>
+  
+    
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+    
+  
+</nav>
+
+    </div>
+    
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div class="reimu-search-input" id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
+    
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+
+
+<script src="../../../../../js/script.js"></script>
+
+
+
+  
+<script src="../../../../../js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="../../../../../js/pjax_script.js" data-pjax></script>
+
+
+
+  
+<script src="../../../../../js/generator_search.js" defer></script>
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "wingtings",
+          title: "Manim 学习笔记",
+          url: "http://localhost:4000/2025/03/08/Manim-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/",
+          excerpt: "",
+          description: "",
+          stripContent: "Manim是一个用来制作精美数学物理动画的软件。  具体的下载配置参考乐正垂星在b站上的教程https://www.bilibili.com/video/BV1om411k7Fv/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=664bee53c86bfd3e072a77c585e3b350 主要需要配置的东西：mamba(封装python虚拟环境)，miniforge(用来连接开源站方便下载)，在manimce里面要下载ffmp",
+          date: "Sat Mar 08 2025 13:05:39 GMT+0800",
+          updated: "Fri Mar 21 2025 22:44:20 GMT+0800",
+          cover: "/images/banner.webp",
+        };
+      </script>
+       
+    
+    
+      
+        
+<script src="../../../../../js/insert_highlight.js" data-pjax></script>
+
+        
+          
+<script src="https://npm.webcache.cn/html-to-image@1.11.11/dist/html-to-image.js" integrity="sha384-UbfRVKN3&#x2F;elS1r7JcK2FhmPP+KlJ4CvYwbyYD7tH+uTkbT9bNJr9eJeQ0FoFbAgz" crossorigin="anonymous" defer data-pjax></script>
+
+          
+<script src="https://npm.webcache.cn/qrcode@1.4.4/build/qrcode.min.js" integrity="sha384-0RsG1yo&#x2F;crf&#x2F;1Qc14sho26SXXOTngNCjgJw7fuvXBt9W&#x2F;OChF&#x2F;Ijx+aUuBDqQwEk" crossorigin="anonymous" defer data-pjax></script>
+
+        
+      
+    
+    
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        
+        const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+      
+        
+
+
+
+
+
+
+
+
+      
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.9.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+<script data-pjax>
+  var updateTime = _$('#post-update-time')?.innerHTML;
+
+  if (updateTime) {
+    const update = new Date(updateTime);
+    const now = new Date();
+    const diff = now - update;
+    const days = diff / 86400000;
+    const { daysAgo, message: template } = window.REIMU_CONFIG.outdate;
+    if (days >= daysAgo) {
+      let message = `This article was last updated on ${updateTime}. Please note that the content may no longer be applicable.`;
+      if (typeof template === 'string') {
+        message = template.replace(/{time}/, updateTime);
+      } else if (typeof template === 'object') {
+        const lang = document.documentElement.lang;
+        const messageKey = Object.keys(template).find(key => key.toLowerCase() === lang.toLowerCase());
+        if (messageKey && template[messageKey]) {
+          message = template[messageKey].replace(/{time}/, updateTime);
+        }
+      }
+      const blockquote = _$('#outdate-blockquote');
+      if (blockquote) {
+        blockquote.querySelector('p').innerText = message;
+        blockquote.style.display = 'block';
+      }
+    }
+  }
+</script>
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+  </html>
+

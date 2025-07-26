@@ -3,11 +3,11 @@
   src: url("//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2") format('woff2');
   font-display: swap;
 }
-.tag-wrap .archives-tag-list-link:before {
+.archives-tag-list-link:before {
   font-family: "iconfont";
   content: "\e622";
 }
-.category-wrap .archives-category-list-link:before {
+.archives-category-list-link:before {
   font-family: "iconfont";
   content: "\e604";
 }
@@ -107,7 +107,7 @@
   font-family: "iconfont";
   content: "\e627";
 }
-.reimu-popup .popup-btn-close:before {
+.popup-btn-close:before {
   font-family: "iconfont";
   content: "\e626";
 }
@@ -132,6 +132,9 @@
 .icon-twitter:before {
   content: "\e62a";
 }
+.icon-linkedin:before {
+  content: "\e614";
+}
 .icon-bilibili:before {
   content: "\e603";
 }
@@ -140,6 +143,15 @@
 }
 .icon-zhihu:before {
   content: "\e62e";
+}
+.icon-reddit:before {
+  content: "\e61c";
+}
+.icon-steam:before {
+  content: "\e624";
+}
+.icon-email:before {
+  content: "\e63c";
 }
 .sidebar-btn-wrapper .sidebar-toc-btn:before {
   font-family: "iconfont";

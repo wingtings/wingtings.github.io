@@ -1,11 +1,11 @@
 :root {
   --font-icon: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
 }
-.tag-wrap .archives-tag-list-link:before {
+.archives-tag-list-link:before {
   font-family: var(--font-icon);
   content: "\f02b";
 }
-.category-wrap .archives-category-list-link:before {
+.archives-category-list-link:before {
   font-family: var(--font-icon);
   content: "\f02e";
 }
@@ -105,7 +105,7 @@
   font-family: var(--font-icon);
   content: "\f164";
 }
-.reimu-popup .popup-btn-close:before {
+.popup-btn-close:before {
   font-family: var(--font-icon);
   content: "\f057";
 }
@@ -130,6 +130,9 @@
 .icon-twitter:before {
   content: "\e61b";
 }
+.icon-linkedin:before {
+  content: "\f08c";
+}
 .icon-bilibili:before {
   content: "\e3d9";
 }
@@ -138,6 +141,15 @@
 }
 .icon-zhihu:before {
   content: "\f63f";
+}
+.icon-reddit:before {
+  content: "\f1a1";
+}
+.icon-steam:before {
+  content: "\f1b6";
+}
+.icon-email:before {
+  content: "\f0e0";
 }
 .sidebar-btn-wrapper .sidebar-toc-btn:before {
   font-family: var(--font-icon);
