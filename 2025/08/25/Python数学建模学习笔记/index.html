@@ -41,14 +41,16 @@
 
   
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="代码速查专用文。  numpy积分代码 1    pandas读入数据csv&#x2F;xlsx1  写出数据csv&#x2F;xlsx1    matplotlib.pyplot绘图代码1      scipy解微分方程代码1      优化算法模拟退火算法1    遗传算法1    蚁群算法1">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Python数学建模学习笔记">
 <meta property="og:url" content="http://localhost:4000/2025/08/25/Python%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="wingtings">
+<meta property="og:description" content="代码速查专用文。  numpy积分代码 1    pandas读入数据csv&#x2F;xlsx1  写出数据csv&#x2F;xlsx1    matplotlib.pyplot绘图代码1      scipy解微分方程代码1      优化算法模拟退火算法1    遗传算法1    蚁群算法1">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://tuchuang-12g.pages.dev/%E6%B7%B1%E5%A4%9C%E8%AF%97%E4%BA%BA.jpg">
 <meta property="article:published_time" content="2025-08-25T14:32:33.000Z">
-<meta property="article:modified_time" content="2025-08-25T14:37:00.066Z">
+<meta property="article:modified_time" content="2025-08-25T16:24:10.133Z">
 <meta property="article:author" content="wingtings">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -280,7 +282,7 @@
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#numpy"><span class="toc-number">1.</span> <span class="toc-text">numpy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.</span> <span class="toc-text">积分代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pandas"><span class="toc-number">2.</span> <span class="toc-text">pandas</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.1.</span> <span class="toc-text">读入数据csv&#x2F;xlsx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%87%BA%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.2.</span> <span class="toc-text">写出数据csv&#x2F;xlsx</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#matplotlib-pyplot"><span class="toc-number">3.</span> <span class="toc-text">matplotlib.pyplot</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE%E4%BB%A3%E7%A0%81"><span class="toc-number">3.1.</span> <span class="toc-text">绘图代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#scipy"><span class="toc-number">4.</span> <span class="toc-text">scipy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%BB%A3%E7%A0%81"><span class="toc-number">4.1.</span> <span class="toc-text">解微分方程代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">优化算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95"><span class="toc-number">5.1.</span> <span class="toc-text">模拟退火算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95"><span class="toc-number">5.2.</span> <span class="toc-text">遗传算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%9A%81%E7%BE%A4%E7%AE%97%E6%B3%95"><span class="toc-number">5.3.</span> <span class="toc-text">蚁群算法</span></a></li></ol></li></ol>
       
   </div>
 </div>
@@ -398,7 +400,7 @@
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-08-25T14:32:33.000Z" itemprop="datePublished">2025-08-25</time>
-    <time style="display: none;" id="post-update-time">2025-08-25</time>
+    <time style="display: none;" id="post-update-time">2025-08-26</time>
   </span>
 </div>
 
@@ -417,7 +419,40 @@
         <blockquote id="outdate-blockquote" style="display: none;"><p></p></blockquote>
       
       
-        <p><img src="https://tuchuang-12g.pages.dev/%E6%B7%B1%E5%A4%9C%E8%AF%97%E4%BA%BA.jpg"></p>
+        <p>代码速查专用文。</p>
+<p><img src="https://tuchuang-12g.pages.dev/%E6%B7%B1%E5%A4%9C%E8%AF%97%E4%BA%BA.jpg"></p>
+<h1 id="numpy"><a href="#numpy" class="headerlink" title="numpy"></a>numpy</h1><h2 id="积分代码"><a href="#积分代码" class="headerlink" title="积分代码"></a>积分代码</h2> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="pandas"><a href="#pandas" class="headerlink" title="pandas"></a>pandas</h1><h2 id="读入数据csv-xlsx"><a href="#读入数据csv-xlsx" class="headerlink" title="读入数据csv&#x2F;xlsx"></a>读入数据csv&#x2F;xlsx</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
+
+<h2 id="写出数据csv-xlsx"><a href="#写出数据csv-xlsx" class="headerlink" title="写出数据csv&#x2F;xlsx"></a>写出数据csv&#x2F;xlsx</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="matplotlib-pyplot"><a href="#matplotlib-pyplot" class="headerlink" title="matplotlib.pyplot"></a>matplotlib.pyplot</h1><h2 id="绘图代码"><a href="#绘图代码" class="headerlink" title="绘图代码"></a>绘图代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="scipy"><a href="#scipy" class="headerlink" title="scipy"></a>scipy</h1><h2 id="解微分方程代码"><a href="#解微分方程代码" class="headerlink" title="解微分方程代码"></a>解微分方程代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="优化算法"><a href="#优化算法" class="headerlink" title="优化算法"></a>优化算法</h1><h2 id="模拟退火算法"><a href="#模拟退火算法" class="headerlink" title="模拟退火算法"></a>模拟退火算法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="遗传算法"><a href="#遗传算法" class="headerlink" title="遗传算法"></a>遗传算法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="蚁群算法"><a href="#蚁群算法" class="headerlink" title="蚁群算法"></a>蚁群算法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -573,10 +608,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        7.9k
+        9.3k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:28
+        00:35
       </div>
     
     
@@ -609,7 +644,7 @@
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#numpy"><span class="toc-number">1.</span> <span class="toc-text">numpy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.</span> <span class="toc-text">积分代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pandas"><span class="toc-number">2.</span> <span class="toc-text">pandas</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.1.</span> <span class="toc-text">读入数据csv&#x2F;xlsx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%87%BA%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.2.</span> <span class="toc-text">写出数据csv&#x2F;xlsx</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#matplotlib-pyplot"><span class="toc-number">3.</span> <span class="toc-text">matplotlib.pyplot</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE%E4%BB%A3%E7%A0%81"><span class="toc-number">3.1.</span> <span class="toc-text">绘图代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#scipy"><span class="toc-number">4.</span> <span class="toc-text">scipy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%BB%A3%E7%A0%81"><span class="toc-number">4.1.</span> <span class="toc-text">解微分方程代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">优化算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95"><span class="toc-number">5.1.</span> <span class="toc-text">模拟退火算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95"><span class="toc-number">5.2.</span> <span class="toc-text">遗传算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%9A%81%E7%BE%A4%E7%AE%97%E6%B3%95"><span class="toc-number">5.3.</span> <span class="toc-text">蚁群算法</span></a></li></ol></li></ol>
       
   </div>
 </div>
@@ -810,9 +845,9 @@
           url: "http://localhost:4000/2025/08/25/Python%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/",
           excerpt: "",
           description: "",
-          stripContent: " ",
+          stripContent: "代码速查专用文。  numpy积分代码 1    pandas读入数据csv&amp;#x2F;xlsx1  写出数据csv&amp;#x2F;xlsx1    matplotlib.pyplot绘图代码1      scipy解微分方程代码1      优化算法模拟退火算法1    遗传算法1    蚁群算法1  ",
           date: "Mon Aug 25 2025 22:32:33 GMT+0800",
-          updated: "Mon Aug 25 2025 22:37:00 GMT+0800",
+          updated: "Tue Aug 26 2025 00:24:10 GMT+0800",
           cover: "https://tuchuang-12g.pages.dev/深夜诗人.jpg",
         };
       </script>
