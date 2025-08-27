@@ -45,7 +45,7 @@
   grid-row: 7;
 }
 .tiles {
-  grid-column: 2/55;
+  grid-column: 2/56;
   grid-row: 2/9;
   display: grid;
   grid-auto-flow: column;
