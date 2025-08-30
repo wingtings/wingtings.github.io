@@ -49,9 +49,9 @@
 <meta property="og:description" content="代码速查专用文。  numpy统计分析与数据拟合12345678910111213141516171819202122232425262728import numpy as npimport matplotlib.pyplot as plt# 生成带噪声的数据x &#x3D; np.linspace(0, 10, 100)noise &#x3D; np.random.normal(0, 0.5, 100)y &#x3D; 2*">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://tuchuang-12g.pages.dev/%E6%B7%B1%E5%A4%9C%E8%AF%97%E4%BA%BA.jpg">
-<meta property="og:image" content="https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef94e0b453f4faaf51f2de6684?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-03dd88b303d2f4d2c613366ed09bda89_1440w.jpg">
 <meta property="article:published_time" content="2025-08-25T14:32:33.000Z">
-<meta property="article:modified_time" content="2025-08-30T14:04:52.736Z">
+<meta property="article:modified_time" content="2025-08-30T15:52:54.243Z">
 <meta property="article:author" content="wingtings">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -286,7 +286,7 @@
           <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
   
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#numpy"><span class="toc-number">1.</span> <span class="toc-text">numpy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8B%9F%E5%90%88"><span class="toc-number">1.1.</span> <span class="toc-text">统计分析与数据拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.</span> <span class="toc-text">积分代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A8%A1%E6%8B%9F"><span class="toc-number">1.3.</span> <span class="toc-text">蒙特卡洛模拟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E4%B8%8E%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">1.4.</span> <span class="toc-text">信号处理与傅里叶变换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pandas"><span class="toc-number">2.</span> <span class="toc-text">pandas</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.1.</span> <span class="toc-text">读入数据csv&#x2F;xlsx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%87%BA%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.2.</span> <span class="toc-text">写出数据csv&#x2F;xlsx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.3.</span> <span class="toc-text">表格设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#matplotlib-pyplot"><span class="toc-number">3.</span> <span class="toc-text">matplotlib.pyplot</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE%E4%BB%A3%E7%A0%81"><span class="toc-number">3.1.</span> <span class="toc-text">绘图代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%90%84%E7%B1%BB%E6%96%B9%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">解各类方程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#fsolve-%E5%87%BD%E6%95%B0"><span class="toc-number">4.1.</span> <span class="toc-text">fsolve()函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#interp1d-%E5%87%BD%E6%95%B0"><span class="toc-number">4.2.</span> <span class="toc-text">interp1d ()函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E8%B0%83%E9%80%92%E5%A2%9E%E7%9A%84%E5%87%BD%E6%95%B0%E6%96%B9%E7%A8%8B"><span class="toc-number">4.3.</span> <span class="toc-text">单调递增的函数方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">4.4.</span> <span class="toc-text">偏微分方程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">优化算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95Simulated-Annealing-SA"><span class="toc-number">5.1.</span> <span class="toc-text">模拟退火算法Simulated Annealing(SA)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95Genetic-Algorithm-GA"><span class="toc-number">5.2.</span> <span class="toc-text">遗传算法Genetic Algorithm (GA)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%9A%81%E7%BE%A4%E7%AE%97%E6%B3%95Ant-Colony-Optimization-ACO"><span class="toc-number">5.3.</span> <span class="toc-text">蚁群算法Ant Colony Optimization (ACO)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#K-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95"><span class="toc-number">5.4.</span> <span class="toc-text">K-means聚类算法</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#numpy"><span class="toc-number">1.</span> <span class="toc-text">numpy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8B%9F%E5%90%88"><span class="toc-number">1.1.</span> <span class="toc-text">统计分析与数据拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">常见的函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.2.1.</span> <span class="toc-text">数组创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90"><span class="toc-number">1.2.2.</span> <span class="toc-text">随机数生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.3.</span> <span class="toc-text">数学运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E5%92%8C%E6%90%9C%E7%B4%A2"><span class="toc-number">1.2.4.</span> <span class="toc-text">排序和搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-number">1.2.5.</span> <span class="toc-text">线性代数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A8%A1%E6%8B%9F"><span class="toc-number">1.3.</span> <span class="toc-text">蒙特卡洛模拟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E4%B8%8E%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">1.4.</span> <span class="toc-text">信号处理与傅里叶变换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pandas"><span class="toc-number">2.</span> <span class="toc-text">pandas</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.1.</span> <span class="toc-text">读入数据csv&#x2F;xlsx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%87%BA%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.2.</span> <span class="toc-text">写出数据csv&#x2F;xlsx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.3.</span> <span class="toc-text">表格设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#matplotlib-pyplot"><span class="toc-number">3.</span> <span class="toc-text">matplotlib.pyplot</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE%E4%BB%A3%E7%A0%81"><span class="toc-number">3.1.</span> <span class="toc-text">绘图代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%90%84%E7%B1%BB%E6%96%B9%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">解各类方程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#fsolve-%E5%87%BD%E6%95%B0"><span class="toc-number">4.1.</span> <span class="toc-text">fsolve()函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#interp1d-%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E6%8F%92%E5%80%BC%E6%8B%9F%E5%90%88"><span class="toc-number">4.2.</span> <span class="toc-text">interp1d ()函数——插值拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sympy%E5%BA%93%E4%B8%8E%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">4.3.</span> <span class="toc-text">sympy库与常微分方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">4.4.</span> <span class="toc-text">偏微分方程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">优化算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95Simulated-Annealing-SA"><span class="toc-number">5.1.</span> <span class="toc-text">模拟退火算法Simulated Annealing(SA)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95Genetic-Algorithm-GA"><span class="toc-number">5.2.</span> <span class="toc-text">遗传算法Genetic Algorithm (GA)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%9A%81%E7%BE%A4%E7%AE%97%E6%B3%95Ant-Colony-Optimization-ACO"><span class="toc-number">5.3.</span> <span class="toc-text">蚁群算法Ant Colony Optimization (ACO)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#K-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95"><span class="toc-number">5.4.</span> <span class="toc-text">K-means聚类算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA"><span class="toc-number">5.5.</span> <span class="toc-text">元胞自动机</span></a></li></ol></li></ol>
   
 </div>
 </div>
@@ -429,8 +429,202 @@
 <p><img src="https://tuchuang-12g.pages.dev/%E6%B7%B1%E5%A4%9C%E8%AF%97%E4%BA%BA.jpg"></p>
 <h1 id="numpy"><a href="#numpy" class="headerlink" title="numpy"></a>numpy</h1><h2 id="统计分析与数据拟合"><a href="#统计分析与数据拟合" class="headerlink" title="统计分析与数据拟合"></a>统计分析与数据拟合</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><br><span class="hljs-comment"># 生成带噪声的数据</span><br>x = np.linspace(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>)<br>noise = np.random.normal(<span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">100</span>)<br>y = <span class="hljs-number">2</span>*x + <span class="hljs-number">1</span> + noise<br><br><span class="hljs-comment"># 多项式拟合</span><br>coeffs = np.polyfit(x, y, <span class="hljs-number">1</span>)  <span class="hljs-comment"># 1次多项式（线性）拟合</span><br>poly = np.poly1d(coeffs)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;拟合结果: y =&quot;</span>, poly)<br><br><span class="hljs-comment"># 计算相关系数</span><br>correlation = np.corrcoef(x, y)[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;相关系数:&quot;</span>, correlation)<br><br><span class="hljs-comment"># 数据统计</span><br>mean = np.mean(y)<br>median = np.median(y)<br>std_dev = np.std(y)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;均值: <span class="hljs-subst">&#123;mean&#125;</span>, 中位数: <span class="hljs-subst">&#123;median&#125;</span>, 标准差: <span class="hljs-subst">&#123;std_dev&#125;</span>&quot;</span>)<br><br><span class="hljs-comment"># 可视化拟合结果</span><br>plt.scatter(x, y, label=<span class="hljs-string">&#x27;原始数据&#x27;</span>)<br>plt.plot(x, poly(x), <span class="hljs-string">&#x27;r-&#x27;</span>, label=<span class="hljs-string">&#x27;拟合曲线&#x27;</span>)<br>plt.legend()<br>plt.show()<br></code></pre></td></tr></table></figure>
 
-<h2 id="积分代码"><a href="#积分代码" class="headerlink" title="积分代码"></a>积分代码</h2> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
-
+<h2 id="常见的函数"><a href="#常见的函数" class="headerlink" title="常见的函数"></a>常见的函数</h2><h3 id="数组创建"><a href="#数组创建" class="headerlink" title="数组创建"></a>数组创建</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>np.array()</code></td>
+<td>从列表或元组创建数组</td>
+</tr>
+<tr>
+<td><code>np.zeros()</code></td>
+<td>创建全0数组</td>
+</tr>
+<tr>
+<td><code>np.ones()</code></td>
+<td>创建全1数组</td>
+</tr>
+<tr>
+<td><code>np.empty()</code></td>
+<td>创建未初始化的数组</td>
+</tr>
+<tr>
+<td><code>np.arange()</code></td>
+<td>创建等差数列数组</td>
+</tr>
+<tr>
+<td><code>np.linspace()</code></td>
+<td>创建指定间隔内的等分点数组</td>
+</tr>
+<tr>
+<td><code>np.eye()</code></td>
+<td>创建单位矩阵</td>
+</tr>
+<tr>
+<td><code>np.random.rand()</code></td>
+<td>创建[0,1)均匀分布随机数数组</td>
+</tr>
+<tr>
+<td><code>np.random.randn()</code></td>
+<td>创建标准正态分布随机数数组</td>
+</tr>
+</tbody></table>
+<h3 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>np.random.seed()</code></td>
+<td>设置随机数种子</td>
+</tr>
+<tr>
+<td><code>np.random.shuffle()</code></td>
+<td>随机打乱数组</td>
+</tr>
+<tr>
+<td><code>np.random.choice()</code></td>
+<td>从给定数组中随机选择</td>
+</tr>
+<tr>
+<td><code>np.random.normal()</code></td>
+<td>生成正态分布随机数</td>
+</tr>
+<tr>
+<td><code>np.random.uniform()</code></td>
+<td>生成均匀分布随机数</td>
+</tr>
+</tbody></table>
+<h3 id="数学运算"><a href="#数学运算" class="headerlink" title="数学运算"></a>数学运算</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>np.add()</code></td>
+<td>元素级加法</td>
+</tr>
+<tr>
+<td><code>np.subtract()</code></td>
+<td>元素级减法</td>
+</tr>
+<tr>
+<td><code>np.multiply()</code></td>
+<td>元素级乘法</td>
+</tr>
+<tr>
+<td><code>np.divide()</code></td>
+<td>元素级除法</td>
+</tr>
+<tr>
+<td><code>np.power()</code></td>
+<td>元素级幂运算</td>
+</tr>
+<tr>
+<td><code>np.sqrt()</code></td>
+<td>元素级平方根</td>
+</tr>
+<tr>
+<td><code>np.sin()</code>, <code>np.cos()</code></td>
+<td>三角函数</td>
+</tr>
+<tr>
+<td><code>np.exp()</code>, <code>np.log()</code></td>
+<td>指数和对数函数</td>
+</tr>
+<tr>
+<td><code>np.sum()</code></td>
+<td>求和</td>
+</tr>
+<tr>
+<td><code>np.mean()</code></td>
+<td>求平均值</td>
+</tr>
+<tr>
+<td><code>np.std()</code></td>
+<td>求标准差</td>
+</tr>
+<tr>
+<td><code>np.var()</code></td>
+<td>求方差</td>
+</tr>
+<tr>
+<td><code>np.min()</code>, <code>np.max()</code></td>
+<td>求最小&#x2F;最大值</td>
+</tr>
+<tr>
+<td><code>np.argmin()</code>, <code>np.argmax()</code></td>
+<td>求最小&#x2F;最大值的索引</td>
+</tr>
+</tbody></table>
+<h3 id="排序和搜索"><a href="#排序和搜索" class="headerlink" title="排序和搜索"></a>排序和搜索</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>np.sort()</code></td>
+<td>排序数组</td>
+</tr>
+<tr>
+<td><code>np.argsort()</code></td>
+<td>返回排序后的索引</td>
+</tr>
+<tr>
+<td><code>np.searchsorted()</code></td>
+<td>在排序数组中查找插入点</td>
+</tr>
+</tbody></table>
+<h3 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>np.dot()</code></td>
+<td>点积&#x2F;矩阵乘法</td>
+</tr>
+<tr>
+<td><code>np.matmul()</code> &#x2F; <code>@</code></td>
+<td>矩阵乘法</td>
+</tr>
+<tr>
+<td><code>np.linalg.inv()</code></td>
+<td>求逆矩阵</td>
+</tr>
+<tr>
+<td><code>np.linalg.det()</code></td>
+<td>求行列式</td>
+</tr>
+<tr>
+<td><code>np.linalg.eig()</code></td>
+<td>求特征值和特征向量</td>
+</tr>
+<tr>
+<td><code>np.linalg.svd()</code></td>
+<td>奇异值分解</td>
+</tr>
+<tr>
+<td><code>np.linalg.norm()</code></td>
+<td>求范数</td>
+</tr>
+<tr>
+<td><code>np.linalg.solve()</code></td>
+<td>求解线性方程组</td>
+</tr>
+</tbody></table>
 <h2 id="蒙特卡洛模拟"><a href="#蒙特卡洛模拟" class="headerlink" title="蒙特卡洛模拟"></a>蒙特卡洛模拟</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 蒙特卡洛积分计算π</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">monte_carlo_pi</span>(<span class="hljs-params">n</span>):<br>    points = np.random.rand(n, <span class="hljs-number">2</span>)  <span class="hljs-comment"># 生成n个[0,1)x[0,1)的随机点</span><br>    inside_circle = np.<span class="hljs-built_in">sum</span>(np.<span class="hljs-built_in">sum</span>(points**<span class="hljs-number">2</span>, axis=<span class="hljs-number">1</span>) &lt; <span class="hljs-number">1</span>)  <span class="hljs-comment"># 计算在单位圆内的点数</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">4</span> * inside_circle / n  <span class="hljs-comment"># π的估计值</span><br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;π的蒙特卡洛估计值: <span class="hljs-subst">&#123;monte_carlo_pi(<span class="hljs-number">100000</span>)&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
 
 <h2 id="信号处理与傅里叶变换"><a href="#信号处理与傅里叶变换" class="headerlink" title="信号处理与傅里叶变换"></a>信号处理与傅里叶变换</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#生成信号</span><br>t = np.linspace(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1000</span>)<br>f1, f2 = <span class="hljs-number">5</span>, <span class="hljs-number">20</span>  <span class="hljs-comment"># 5Hz和20Hz的信号</span><br>signal = np.sin(<span class="hljs-number">2</span>*np.pi*f1*t) + <span class="hljs-number">0.5</span>*np.sin(<span class="hljs-number">2</span>*np.pi*f2*t)<br><br><span class="hljs-comment"># 执行傅里叶变换</span><br>fft_result = np.fft.fft(signal)<br>freqs = np.fft.fftfreq(<span class="hljs-built_in">len</span>(t), t[<span class="hljs-number">1</span>]-t[<span class="hljs-number">0</span>])<br><br><span class="hljs-comment"># 计算功率谱</span><br>power = np.<span class="hljs-built_in">abs</span>(fft_result)**<span class="hljs-number">2</span><br><br><span class="hljs-comment"># 绘制原始信号和频谱</span><br>plt.figure(figsize=(<span class="hljs-number">12</span>, <span class="hljs-number">6</span>))<br>plt.subplot(<span class="hljs-number">211</span>)<br>plt.plot(t, signal)<br>plt.title(<span class="hljs-string">&#x27;时域信号&#x27;</span>)<br>plt.xlabel(<span class="hljs-string">&#x27;时间 (s)&#x27;</span>)<br><br>plt.subplot(<span class="hljs-number">212</span>)<br>plt.plot(freqs[:<span class="hljs-built_in">len</span>(freqs)//<span class="hljs-number">2</span>], power[:<span class="hljs-built_in">len</span>(freqs)//<span class="hljs-number">2</span>])<br>plt.title(<span class="hljs-string">&#x27;频谱&#x27;</span>)<br>plt.xlabel(<span class="hljs-string">&#x27;频率 (Hz)&#x27;</span>)<br>plt.tight_layout()<br>plt.show()<br></code></pre></td></tr></table></figure>
@@ -490,7 +684,7 @@
 <li>对于困难问题，考虑提供函数导数或使用其他求解器</li>
 <li>对多解问题，**不可直接套用！！！！**尝试使用其他优化方法（如二分法）</li>
 </ol>
-<h2 id="interp1d-函数"><a href="#interp1d-函数" class="headerlink" title="interp1d ()函数"></a>interp1d ()函数</h2><figure class="highlight plaintext"><figcaption><span>```SciPy ```插值模块 ```scipy.interpolate``` 中的一个重要函数，用于一维插值。它基于已知数据点创建一个插值函数，能够估计任意中间点的值。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs interp1d```是"><br>**基本功能**<br><br>```interp1d```构建一个函数，用于近似两组数据点之间的关系：<br><br>- 给定一组 x 值和对应的 y 值<br>- 返回一个可调用对象，用于预测新 x 值对应的 y 值<br><br>```python<br>#基本语法<br>scipy.interpolate.interp1d(x, y, kind=&#x27;linear&#x27;, axis=-1, copy=True, <br>                          bounds_error=True, fill_value=nan, assume_sorted=False)<br></code></pre></td></tr></table></figure>
+<h2 id="interp1d-函数——插值拟合"><a href="#interp1d-函数——插值拟合" class="headerlink" title="interp1d ()函数——插值拟合"></a>interp1d ()函数——插值拟合</h2><figure class="highlight plaintext"><figcaption><span>```SciPy ```插值模块 ```scipy.interpolate``` 中的一个重要函数，用于一维插值。它基于已知数据点创建一个插值函数，能够估计任意中间点的值。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs interp1d```是"><br>**基本功能**<br><br>```interp1d```构建一个函数，用于近似两组数据点之间的关系：<br><br>- 给定一组 x 值和对应的 y 值<br>- 返回一个可调用对象，用于预测新 x 值对应的 y 值<br><br>```python<br>#基本语法<br>scipy.interpolate.interp1d(x, y, kind=&#x27;linear&#x27;, axis=-1, copy=True, <br>                          bounds_error=True, fill_value=nan, assume_sorted=False)<br></code></pre></td></tr></table></figure>
 
 <ol>
 <li><strong>x</strong>: 自变量数据点（<strong>必须是递增或递减的</strong>）</li>
@@ -511,7 +705,7 @@
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#example:实现了一个反函数</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">inverse</span>(<span class="hljs-params">t</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">F</span>(<span class="hljs-params">theta</span>):<br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">func</span>(<span class="hljs-params">theta</span>):<br>            <span class="hljs-keyword">return</span> b * (<span class="hljs-number">0.5</span>*theta*np.sqrt(<span class="hljs-number">1</span>+theta**<span class="hljs-number">2</span>) + <span class="hljs-number">0.5</span>*np.log(theta + np.sqrt(<span class="hljs-number">1</span>+theta**<span class="hljs-number">2</span>)))<br>        <span class="hljs-keyword">return</span> func(<span class="hljs-number">32</span>*np.pi)-func(theta)<br>    theta_val=np.linspace(<span class="hljs-number">0</span>, <span class="hljs-number">32</span>*np.pi,<span class="hljs-number">1000</span>)<br>    F_val = F(theta_val)  <span class="hljs-comment"># 样本点</span><br>    F_inv_approx = interp1d(F_val, theta_val, kind=<span class="hljs-string">&#x27;linear&#x27;</span>, fill_value=<span class="hljs-string">&#x27;extrapolate&#x27;</span>)<br>    theta0 = F_inv_approx(v0*t)<br>    <span class="hljs-keyword">return</span> theta0<br></code></pre></td></tr></table></figure>
 
-<h2 id="单调递增的函数方程"><a href="#单调递增的函数方程" class="headerlink" title="单调递增的函数方程"></a>单调递增的函数方程</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#example</span><br></code></pre></td></tr></table></figure>
+<h2 id="sympy库与常微分方程"><a href="#sympy库与常微分方程" class="headerlink" title="sympy库与常微分方程"></a>sympy库与常微分方程</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sympy <span class="hljs-keyword">as</span> sp<br><br></code></pre></td></tr></table></figure>
 
 <h2 id="偏微分方程"><a href="#偏微分方程" class="headerlink" title="偏微分方程"></a>偏微分方程</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 
@@ -526,11 +720,22 @@
 </blockquote>
 <p><strong>模拟退火算法</strong>来源于固体退火原理，将固体加温至充分高，再让其徐徐冷却，加温时，固体内部粒子随<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B8%A9%E5%8D%87/0?fromModule=lemma_inlink">温升</a>变为无序状，内能增大，而徐徐冷却时粒子渐趋有序，在每个温度都达到平衡态，最后在常温时达到基态，内能减为最小。</p>
 <p>根据<strong>Metropolis准则</strong>，粒子在温度T时趋于平衡的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%A6%82%E7%8E%87/0?fromModule=lemma_inlink">概率</a>为e(-<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%CE%94E/0?fromModule=lemma_inlink">ΔE</a>&#x2F;(kT))，其中E为温度T时的内能，ΔE为其改变量，k为Boltzmann常数。用固体退火模拟组合优化问题，将内能E模拟为<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0/0?fromModule=lemma_inlink">目标函数</a>值f，温度T演化成控制参数t，即得到解组合优化问题的模拟退火算法：由初始解i和控制参数初值t开始，对当前解重复“产生新解→计算目标函数差→接受或舍弃”的迭代，并逐步衰减t值，算法终止时的当前解即为所得近似<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E4%BC%98%E8%A7%A3/0?fromModule=lemma_inlink">最优解</a>，这是基于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97/68532?fromModule=lemma_inlink">蒙特卡罗</a>迭代求解法的一种启发式<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%9A%8F%E6%9C%BA%E6%90%9C%E7%B4%A2/0?fromModule=lemma_inlink">随机搜索</a>过程。退火过程由冷却进度表(Cooling Schedule)控制，包括控制参数的初值t及其衰减因子Δt、每个t值时的迭代次数L和停止条件S。</p>
-<p><img src="https://bkimg.cdn.bcebos.com/pic/e61190ef76c6a7ef94e0b453f4faaf51f2de6684?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080"></p>
 <p><strong>模拟退火算法</strong>在全局最优性方面具有较好的表现，尤其适用于处理复杂、非凸的最优化问题。与梯度下降算法相比，模拟退火算法能够避免陷入局部最优，而<strong>遗传算法</strong>则具有更强的全局搜索能力，适用于更复杂的问题。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs scipy```提供了内置的模拟退火优化器："><br>```python<br>from scipy import optimize<br>import numpy as np<br><br># 定义目标函数<br>def objective_function(x):<br>    return x[0]**2 + x[1]**2  # 例如：最小化 f(x,y) = x² + y²<br><br># 定义初始解<br>initial_state = [5.0, 5.0]<br><br># 调用模拟退火算法<br>result = optimize.dual_annealing(<br>    objective_function,<br>    bounds=[(-10, 10), (-10, 10)],  # 各变量的取值范围<br>    maxiter=1000,                    # 最大迭代次数<br>    initial_temp=5230,               # 初始温度<br>    restart_temp_ratio=2e-5,         # 重启温度比率<br>    visit=2.62,                      # 访问参数<br>    accept=-5.0,                     # 接受参数<br>    no_local_search=False            # 是否执行局部搜索<br>)<br><br>print(&quot;最优解: x =&quot;, result.x)<br>print(&quot;最优值: f(x) =&quot;, result.fun)<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs scipy```提供了内置的模拟退火优化器```dual_annealing```："><br>`dual_annealing` 返回一个 `OptimizeResult` 对象，其中包含：<br><br>- `x`: 最优解向量<br>- `fun`: 最优解处的函数值<br>- `nfev`: 函数评估次数<br>- `nit`: 迭代次数<br>- `success`: 是否成功找到解<br>- `message`: 描述终止原因的消息<br><br>```python<br>from scipy import optimize<br>import numpy as np<br><br># 定义目标函数<br>def objective_function(x):<br>    return x[0]**2 + x[1]**2  # 例如：最小化 f(x,y) = x² + y²<br><br># 定义初始解<br>initial_state = [5.0, 5.0]<br><br># 调用模拟退火算法<br>result = optimize.dual_annealing(<br>    objective_function,<br>    bounds=[(-10, 10), (-10, 10)],  # 各变量的取值范围<br>    maxiter=1000,                    # 最大迭代次数<br>    initial_temp=5230,               # 初始温度<br>    restart_temp_ratio=2e-5,         # 重启温度比率<br>    visit=2.62,                      # 访问参数<br>    accept=-5.0,                     # 接受参数<br>    no_local_search=False            # 是否执行局部搜索<br>)<br><br>print(&quot;最优解: x =&quot;, result.x)<br>print(&quot;最优值: f(x) =&quot;, result.fun)<br></code></pre></td></tr></table></figure>
 
-<h2 id="遗传算法Genetic-Algorithm-GA"><a href="#遗传算法Genetic-Algorithm-GA" class="headerlink" title="遗传算法Genetic Algorithm (GA)"></a>遗传算法Genetic Algorithm (GA)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
+<p>使用模拟退火算法解决TSP问题的一个实例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">from</span> scipy.optimize <span class="hljs-keyword">import</span> dual_annealing<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><br><span class="hljs-comment"># 计算城市间距离</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">distance</span>(<span class="hljs-params">city1, city2</span>):<br>    <span class="hljs-keyword">return</span> np.sqrt(np.<span class="hljs-built_in">sum</span>((city1 - city2) ** <span class="hljs-number">2</span>)) <span class="hljs-comment">#或者用np.linalg.norm(city1-city2)</span><br><br><span class="hljs-comment"># 总路程计算函数（作为优化目标）</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">objective_function</span>(<span class="hljs-params">x, cities</span>):<br>    <span class="hljs-comment"># 将连续变量转换为排列</span><br>    path = np.argsort(x) <span class="hljs-comment">#返回排序后的索引</span><br>    <br>    <span class="hljs-comment"># 计算路径总长度</span><br>    dist = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(path) - <span class="hljs-number">1</span>):<br>        dist += distance(cities[path[i]], cities[path[i + <span class="hljs-number">1</span>]])<br>    dist += distance(cities[path[-<span class="hljs-number">1</span>]], cities[path[<span class="hljs-number">0</span>]])  <span class="hljs-comment"># 返回起点</span><br>    <br>    <span class="hljs-keyword">return</span> dist<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">solve_tsp_with_dual_annealing</span>(<span class="hljs-params">cities</span>):<br>    n_cities = <span class="hljs-built_in">len</span>(cities)<br>    <br>    <span class="hljs-comment"># 设置初始猜测和边界（对应每个城市的排序值）</span><br>    x0 = np.random.rand(n_cities)<br>    bounds = [(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)] * n_cities<br>    <br>    <span class="hljs-comment"># 运行优化</span><br>    result = dual_annealing(<br>        objective_function, <br>        bounds=bounds, <br>        args=(cities,),<br>        maxiter=<span class="hljs-number">1000</span>,<br>        initial_temp=<span class="hljs-number">100</span>,<br>        restart_temp_ratio=<span class="hljs-number">2e-5</span>,<br>        visit=<span class="hljs-number">2.0</span>,<br>        no_local_search=<span class="hljs-literal">False</span><br>    )<br>    <br>    <span class="hljs-comment"># 获取最优解</span><br>    best_path = np.argsort(result.x)<br>    best_distance = result.fun<br>    <br>    <span class="hljs-keyword">return</span> best_path, best_distance<br><br><span class="hljs-comment"># 可视化结果</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">plot_tsp_solution</span>(<span class="hljs-params">cities, path</span>):<br>    plt.figure(figsize=(<span class="hljs-number">10</span>, <span class="hljs-number">6</span>))<br>    <br>    <span class="hljs-comment"># 绘制城市点</span><br>    plt.scatter(cities[:, <span class="hljs-number">0</span>], cities[:, <span class="hljs-number">1</span>], c=<span class="hljs-string">&#x27;red&#x27;</span>, s=<span class="hljs-number">100</span>)<br>    <br>    <span class="hljs-comment"># 添加城市标签</span><br>    <span class="hljs-keyword">for</span> i, city <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(cities):<br>        plt.annotate(<span class="hljs-string">f&quot;City <span class="hljs-subst">&#123;i&#125;</span>&quot;</span>, (city[<span class="hljs-number">0</span>], city[<span class="hljs-number">1</span>]), xytext=(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>), <br>                    textcoords=<span class="hljs-string">&#x27;offset points&#x27;</span>)<br>    <br>    <span class="hljs-comment"># 绘制路径</span><br>    path_with_return = np.append(path, path[<span class="hljs-number">0</span>])  <span class="hljs-comment"># 添加回起点</span><br>    plt.plot(cities[path_with_return, <span class="hljs-number">0</span>], cities[path_with_return, <span class="hljs-number">1</span>], <span class="hljs-string">&#x27;b-&#x27;</span>)<br>    <br>    plt.title(<span class="hljs-string">&quot;TSP Solution&quot;</span>)<br>    plt.xlabel(<span class="hljs-string">&quot;X&quot;</span>)<br>    plt.ylabel(<span class="hljs-string">&quot;Y&quot;</span>)<br>    plt.grid(<span class="hljs-literal">True</span>)<br>    plt.show()<br><br><span class="hljs-comment"># 测试</span><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    <span class="hljs-comment"># 城市坐标</span><br>    cities = np.array([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">5</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">6</span>]])<br>    <br>    <span class="hljs-comment"># 解决TSP</span><br>    best_path, best_distance = solve_tsp_with_dual_annealing(cities)<br>    <br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Best path:&quot;</span>, best_path)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Best distance:&quot;</span>, best_distance)<br>    <br>    <span class="hljs-comment"># 可视化</span><br>    plot_tsp_solution(cities, best_path)<br></code></pre></td></tr></table></figure>
+
+<h2 id="遗传算法Genetic-Algorithm-GA"><a href="#遗传算法Genetic-Algorithm-GA" class="headerlink" title="遗传算法Genetic Algorithm (GA)"></a>遗传算法Genetic Algorithm (GA)</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/555431690">干货 | 遗传算法(Genetic Algorithm) （附代码及注释）</a></p>
+<p><strong>遗传算法</strong>是一种模拟生物自然进化过程的优化算法，核心思想来自“适者生存、基因重组、基因突变“的生物进化理论。它就像一场“解的进化比赛”：一群候选解（种群）通过“竞争”（选择）、“学习”（交叉）、“创新”（变异），逐步淘汰差的解，保留并优化好的解，最终找到复杂问题的最优解（如函数最大值、旅行商最短路径、背包问题最优解等）。</p>
+<p>遗传算法以一种群体中的所有个体为对象，并利用随机化技术指导对一个被编码的参数空间进行高效搜索。其中，选择、交叉和变异构成了遗传算法的遗传操作；<strong>参数编码、初始群体的设定、<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=211562076&content_type=Article&match_order=1&q=%E9%80%82%E5%BA%94%E5%BA%A6%E5%87%BD%E6%95%B0&zhida_source=entity">适应度函数</a>的设计、遗传操作设计、控制参数设定五个要素</strong>组成了遗传算法的核心内容。</p>
+<p><img src="https://pic4.zhimg.com/v2-03dd88b303d2f4d2c613366ed09bda89_1440w.jpg"></p>
+<p><strong>遗传算法的执行过程：</strong></p>
+<p>遗传算法是从代表问题可能潜在的解集的一个种群（population）开始的，而一个种群则由经过基因（gene）编码的一定数目的个体(individual)组成。<strong>每个个体实际上是染色体(chromosome)带有特征的实体。</strong></p>
+<p>染色体作为遗传物质的主要载体，即多个基因的集合，**其内部表现（即基因型）是某种基因组合，**它决定了个体的形状的外部表现，如黑头发的特征是由染色体中控制这一特征的某种基因组合决定的。**因此，在一开始需要实现从表现型到基因型的映射即编码工作。**由于仿照基因编码的工作很复杂，我们往往进行简化，如二进制编码。</p>
+<p>初代种群产生之后，按照适者生存和优胜劣汰的原理，逐代（generation）演化产生出越来越好的近似解，<strong>在每一代，根据问题域中个体的适应度（fitness）大小选择（selection）个体，并借助于自然遗传学的遗传算子（genetic operators）进行组合交叉（crossover）和变异（mutation），产生出代表新的解集的种群。</strong></p>
+<p>这个过程将导致种群像自然进化一样的后生代种群比前代更加适应于环境，<strong>末代种群中的最优个体经过解码（decoding），可以作为问题近似最优解。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 
 
 
@@ -538,7 +743,7 @@
 
 <h2 id="K-means聚类算法"><a href="#K-means聚类算法" class="headerlink" title="K-means聚类算法"></a>K-means聚类算法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 
-
+<h2 id="元胞自动机"><a href="#元胞自动机" class="headerlink" title="元胞自动机"></a>元胞自动机</h2>
       
     </div>
     <footer class="article-footer">
@@ -548,7 +753,7 @@
     <p><strong><span class="icon-link icon"></span>Permalink: </strong><a href="http://localhost:4000/en/2025/08/25/Python%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">http://localhost:4000/en/2025/08/25/Python%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a></p>
     
     
-    <p><strong><span class="icon-calendar icon"></span>Updated: </strong>2025-08-30 22:04:52</p>
+    <p><strong><span class="icon-calendar icon"></span>Updated: </strong>2025-08-30 23:52:54</p>
     <p><strong><span class="icon-copyright icon"></span>License: </strong>All articles on this blog are licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener external nofollow noreferrer" target="_blank"><span class="icon-creative-commons"></span>BY-NC-SA</a> license agreement unless otherwise stated. Please indicate the source when reprinting!</p>
     <span class="icon-creative-commons article-copyright-bg"></span>
   </blockquote>
@@ -703,10 +908,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        25.4k
+        26.9k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:28
+        01:34
       </div>
     
     
@@ -739,7 +944,7 @@
         <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
   
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#numpy"><span class="toc-number">1.</span> <span class="toc-text">numpy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8B%9F%E5%90%88"><span class="toc-number">1.1.</span> <span class="toc-text">统计分析与数据拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.</span> <span class="toc-text">积分代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A8%A1%E6%8B%9F"><span class="toc-number">1.3.</span> <span class="toc-text">蒙特卡洛模拟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E4%B8%8E%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">1.4.</span> <span class="toc-text">信号处理与傅里叶变换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pandas"><span class="toc-number">2.</span> <span class="toc-text">pandas</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.1.</span> <span class="toc-text">读入数据csv&#x2F;xlsx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%87%BA%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.2.</span> <span class="toc-text">写出数据csv&#x2F;xlsx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.3.</span> <span class="toc-text">表格设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#matplotlib-pyplot"><span class="toc-number">3.</span> <span class="toc-text">matplotlib.pyplot</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE%E4%BB%A3%E7%A0%81"><span class="toc-number">3.1.</span> <span class="toc-text">绘图代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%90%84%E7%B1%BB%E6%96%B9%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">解各类方程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#fsolve-%E5%87%BD%E6%95%B0"><span class="toc-number">4.1.</span> <span class="toc-text">fsolve()函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#interp1d-%E5%87%BD%E6%95%B0"><span class="toc-number">4.2.</span> <span class="toc-text">interp1d ()函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E8%B0%83%E9%80%92%E5%A2%9E%E7%9A%84%E5%87%BD%E6%95%B0%E6%96%B9%E7%A8%8B"><span class="toc-number">4.3.</span> <span class="toc-text">单调递增的函数方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">4.4.</span> <span class="toc-text">偏微分方程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">优化算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95Simulated-Annealing-SA"><span class="toc-number">5.1.</span> <span class="toc-text">模拟退火算法Simulated Annealing(SA)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95Genetic-Algorithm-GA"><span class="toc-number">5.2.</span> <span class="toc-text">遗传算法Genetic Algorithm (GA)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%9A%81%E7%BE%A4%E7%AE%97%E6%B3%95Ant-Colony-Optimization-ACO"><span class="toc-number">5.3.</span> <span class="toc-text">蚁群算法Ant Colony Optimization (ACO)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#K-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95"><span class="toc-number">5.4.</span> <span class="toc-text">K-means聚类算法</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#numpy"><span class="toc-number">1.</span> <span class="toc-text">numpy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8B%9F%E5%90%88"><span class="toc-number">1.1.</span> <span class="toc-text">统计分析与数据拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">常见的函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.2.1.</span> <span class="toc-text">数组创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90"><span class="toc-number">1.2.2.</span> <span class="toc-text">随机数生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.3.</span> <span class="toc-text">数学运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E5%92%8C%E6%90%9C%E7%B4%A2"><span class="toc-number">1.2.4.</span> <span class="toc-text">排序和搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-number">1.2.5.</span> <span class="toc-text">线性代数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A8%A1%E6%8B%9F"><span class="toc-number">1.3.</span> <span class="toc-text">蒙特卡洛模拟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E4%B8%8E%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">1.4.</span> <span class="toc-text">信号处理与傅里叶变换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pandas"><span class="toc-number">2.</span> <span class="toc-text">pandas</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.1.</span> <span class="toc-text">读入数据csv&#x2F;xlsx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%87%BA%E6%95%B0%E6%8D%AEcsv-xlsx"><span class="toc-number">2.2.</span> <span class="toc-text">写出数据csv&#x2F;xlsx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.3.</span> <span class="toc-text">表格设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#matplotlib-pyplot"><span class="toc-number">3.</span> <span class="toc-text">matplotlib.pyplot</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE%E4%BB%A3%E7%A0%81"><span class="toc-number">3.1.</span> <span class="toc-text">绘图代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%90%84%E7%B1%BB%E6%96%B9%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">解各类方程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#fsolve-%E5%87%BD%E6%95%B0"><span class="toc-number">4.1.</span> <span class="toc-text">fsolve()函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#interp1d-%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E6%8F%92%E5%80%BC%E6%8B%9F%E5%90%88"><span class="toc-number">4.2.</span> <span class="toc-text">interp1d ()函数——插值拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sympy%E5%BA%93%E4%B8%8E%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">4.3.</span> <span class="toc-text">sympy库与常微分方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">4.4.</span> <span class="toc-text">偏微分方程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">优化算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95Simulated-Annealing-SA"><span class="toc-number">5.1.</span> <span class="toc-text">模拟退火算法Simulated Annealing(SA)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95Genetic-Algorithm-GA"><span class="toc-number">5.2.</span> <span class="toc-text">遗传算法Genetic Algorithm (GA)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%9A%81%E7%BE%A4%E7%AE%97%E6%B3%95Ant-Colony-Optimization-ACO"><span class="toc-number">5.3.</span> <span class="toc-text">蚁群算法Ant Colony Optimization (ACO)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#K-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95"><span class="toc-number">5.4.</span> <span class="toc-text">K-means聚类算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA"><span class="toc-number">5.5.</span> <span class="toc-text">元胞自动机</span></a></li></ol></li></ol>
   
 </div>
 </div>
@@ -941,7 +1146,7 @@
           description: "",
           stripContent: "代码速查专用文。  numpy统计分析与数据拟合12345678910111213141516171819202122232425262728import numpy as npimport matplotlib.pyplot as plt# 生成带噪声的数据x = np.linspace(0, 10, 100)noise = np.random.normal(0, 0.5, 100)y = 2*x + 1 + noise# 多项式拟合coeffs = np.polyfit(x, y, 1)  ",
           date: "Mon Aug 25 2025 22:32:33 GMT+0800",
-          updated: "Sat Aug 30 2025 22:04:52 GMT+0800",
+          updated: "Sat Aug 30 2025 23:52:54 GMT+0800",
           cover: "https://tuchuang-12g.pages.dev/深夜诗人.jpg",
         };
       </script>
